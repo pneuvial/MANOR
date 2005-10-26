@@ -62,9 +62,9 @@ gradient.nonorm <- norm.arrayCGH(gradient, flag.list=NULL, var="LogRatio",
 FUN=median, na.rm=TRUE)
 gradient.nonorm <- sort.arrayCGH(gradient.nonorm)
 
-layout(matrix(1:2,2,1))
 genome.plot(gradient.nonorm, pch=20, main="Genomic profile without
 normalization", chrLim="LimitChr")   
+x11()
 genome.plot(gradient.norm, pch=20, main="Genomic profile with
 normalization", chrLim="LimitChr")   
 }
