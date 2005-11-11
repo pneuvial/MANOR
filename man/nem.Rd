@@ -59,18 +59,24 @@ nem.arrayCGH(arrayCGH, variable, nk=5, beta=1, iters=2000, ...)
 data(spatial)  ## arrays with local spatial effects
 
 ## Plot of LogRatio measured on the array CGH
+\dontrun{
 arrayPlot(edge,"LogRatio", main="Log2-Ratio measured on the array
 CGH", zlim=c(-1,1), bar="v", mediancenter=TRUE) 
+}
 
 ## Spatial trend of the scaled log-ratios (the variable "ScaledLogRatio"
 ## equals to the log-ratio minus the median value of the corresponding chromosome arm) 
 edgeTrend <- arrayTrend(edge, variable="ScaledLogRatio",
 span=0.03, degree=1, iterations=3, family="symmetric")
 
+\dontrun{
 arrayPlot(edgeTrend, variable="Trend", main="Spatial trend of the array CGH", bar="v") 
+}
 
 ## Classification with spatial constraint of the spatial trend
 edgeNem <- nem(edgeTrend, variable="Trend")
+\dontrun{
 arrayPlot(edgeNem, variable="ZoneNem", main="Spatial zones identified by nem", bar="v")
+}
 }
 

@@ -49,12 +49,15 @@ chrLim=NULL, col.var=NULL, clim=NULL, cex=NULL, pch=NULL, ...)
 data(spatial)
 
 ## default color code: log-ratios
+\dontrun{
 genome.plot(edge.norm, chrLim="LimitChr")
+}
 
 ## color code determined by a qualitative variable: ZoneGNL (DNA copy number code)
 edge.norm$cloneValues$ZoneGNL <- as.factor(edge.norm$cloneValues$ZoneGNL)
+\dontrun{
 genome.plot(edge.norm, col.var="ZoneGNL")
-
+}
 ## comparing profiles with and without normalization
 ## aggregate data without normalization (flags)
 
@@ -62,11 +65,13 @@ gradient.nonorm <- norm.arrayCGH(gradient, flag.list=NULL, var="LogRatio",
 FUN=median, na.rm=TRUE)
 gradient.nonorm <- sort.arrayCGH(gradient.nonorm)
 
+\dontrun{
 genome.plot(gradient.nonorm, pch=20, main="Genomic profile without
 normalization", chrLim="LimitChr")   
 x11()
 genome.plot(gradient.norm, pch=20, main="Genomic profile with
 normalization", chrLim="LimitChr")   
+}
 }
 
 \keyword{}
