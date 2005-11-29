@@ -1,6 +1,6 @@
 Package: MANOR
-Version: 1.3.0
-Date: 2005-09-15
+Version: 1.3.1
+Date: 2005-11-29
 Title: Micro-Array NORmalization
 Author: Pierre Neuvial <pierre.neuvial@curie.fr>, Philippe Hupé <philippe.hupe@curie.fr>
 Maintainer: Pierre Neuvial <pierre.neuvial@curie.fr>
@@ -10,4 +10,4 @@ Description: We propose importation, normalization, visualization, and
 	     of variability in array-CGH experiments.
 License: GPL
 URL: http://bioinfo.curie.fr/projects/manor/index.html
-	      
+biocViews: Microarray, TwoChannels, DataImport, QualityControl, Preprocessing, DNACopyNumber

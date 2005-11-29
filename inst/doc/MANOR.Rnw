@@ -60,7 +60,7 @@ We also define quality scores (\Robject{qscores}) allowing to evaluate the quali
 
 This document is organized as follows: after a short description of optional items we add to \Rclass{arrayCGH} objects (section \ref{sec:arrayCGH}, we introduce the classes \Rclass{flag} (section \ref{sec:flag}) and \Rclass{qscore} (section \ref{sec:qscore}) with their attributes and dedicated methods; then we describe two useful graphical representation functions (section \ref{sec:graph}), namely \Rfunction{genome.plot} and \Rfunction{report.plot}; Afterwards we give a short description of the array-CGH datasets we provide (section \ref{sec:data}); finally we illustrate the usage of \Rpackage{MANOR} by a sample R script (section \ref{sec:session}).
 
-<<term=FALSE>>=
+<<term=FALSE, eval=TRUE>>=
 require(MANOR)
 @
 
@@ -448,6 +448,14 @@ html.report(gradient.norm, dir.out=".", array.name="an array with spatial gradie
 @ 
 
 The results of the previous command can be viewed in the file \htmladdnormallink{gradient.html}{gradient.html}.
+
+\section{Session information}
+
+The version number of R and packages loaded for generating this document are:
+
+<<echo=TRUE, eval=TRUE, print=TRUE>>=
+sessionInfo()
+@
 
 \htmldoc{
 \section{Supplementary data} \label{sec:suppl-data}
