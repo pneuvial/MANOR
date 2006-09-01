@@ -9,8 +9,7 @@
   object, using additional information about the array design.
 
   Supported file types are Genepix Results file (.gpr), outputs from
-  SPOT, or any text file with appropriate fields "Row" and "Column" and
-  specified array design
+  SPOT, or any text file with appropriate fields "Row" and "Column"
 }
 \details{
   Mandatory elements of \code{\link[GLAD]{arrayCGH}} objects are the array design and the x and y
@@ -60,8 +59,8 @@
   vector(clone.names)}
   \item{design}{a numeric vector of length 4 specifying array design as
     number of blocks per row, number of blocks per column, number of
-    rows per block, number of columns by block. This field is mandatory
-    for "default" text files, optional for "gpr" files, and not used for
+    rows per block, number of columns by block. This field is optional
+    for "gpr" files and "default" text files, and not used for
     "SPOT" files}
   \item{add.lines}{boolean value to handle the case when array design
     does not match number of lines. If TRUE, empty lines are added; if
