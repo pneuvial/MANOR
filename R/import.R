@@ -29,7 +29,7 @@ import <- function(file, var.names=NULL, spot.names=NULL, clone.names=NULL, type
   ret <- switch(match.arg(type),
                 gpr = import.gpr.aux(data, var.names=var.names, spot.names=spot.names, add.lines=add.lines, design=design),
                 spot = import.spot.aux(data, var.names=var.names, spot.names=spot.names, add.lines=add.lines),
-                default = import.default.aux(data, var.names=var.names, spot.names=spot.names, design=design))
+                default = import.default.aux(data, var.names=var.names, spot.names=spot.names, add.lines=add.lines, design=design))
   spot.data <- ret$spot.data
   design <- ret$design
   ## sort lines of spot.data
@@ -152,15 +152,41 @@ import.spot.aux <- function(data, var.names=c("Arr.colx", "Arr.rowy", "Spot.colx
   list(spot.data=spot.data, design=design)
 }
 
-import.default.aux <- function(data, var.names=c("Col", "Row"), spot.names=NULL, design=NULL) {
+import.default.aux <- function(data, var.names=c("Col", "Row"), spot.names=NULL, design=NULL, add.lines=FALSE) {
+##   if (is.null(design))
+##     stop("You must specify array design in order to import this type of data")
+
+  d <- data[, var.names]
+  names(d) <- c("Col", "Row")
+
+### compute array design (a little easier than for .gpr files...)
   if (is.null(design))
-    stop("You must specify array design in order to import this type of data")
+    design <- c(1, 1, as.numeric(apply(d, 2, max)))
+    
+### add lines for empty spots if necessary ;)
+  if (prod(design)!=dim(data)[1]) {
+    if (!add.lines)
+      stop("Incomplete .gpr file: number of lines does not match array design. Use 'add.lines=TRUE' to add empty lines")
+    else {
+      print("number of lines does not match array design: adding empty lines...")
+      test <- merge(data.frame(1:design[3]), data.frame(1:design[4]))
+      names(test) <- var.names
+      data <- merge(data, test, all=TRUE)
+
+      ## one more time...
+      d <- data[, var.names]
+      names(d) <- c("Col", "Row")
+    }
+  }
+
 ### optional spot-level information to be kept in arrayCGH
   if (!is.null(spot.names)) {
     spot.data <- data[, union(var.names, spot.names)]
-    names(spot.data) <- c("Col", "Row", spot.names) ## useful if clone.names is of length 1
+##    names(spot.data) <- c("Col", "Row", spot.names) ## useful if clone.names is of length 1
+    spot.data <- rename(spot.data, var.names, c("Col", "Row"))
   }
   else
     spot.data <- data[, var.names]
+
   list(spot.data=spot.data, design=design)
 }
