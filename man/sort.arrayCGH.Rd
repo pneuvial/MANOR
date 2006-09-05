@@ -6,13 +6,16 @@
 }
 
 \usage{
-  sort.arrayCGH(arrayCGH, position.var="Position", chromosome.var="Chromosome")
+  sort.arrayCGH(x, decreasing = FALSE, position.var="Position",
+chromosome.var="Chromosome", ...)
 }
 
 \arguments{
-  \item{arrayCGH}{an object of type \code{arrayCGH}}
+  \item{x}{an object of type \code{arrayCGH}}
+  \item{decreasing}{(for compatibility with \code{sort} class) currently unused}
   \item{position.var}{}
   \item{chromosome.var}{}
+  \item{...}{further arguments to be passed to \code{sort}}
 }
 
 \details{
