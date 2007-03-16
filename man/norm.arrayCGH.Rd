@@ -33,13 +33,15 @@
 }
 
 \usage{
-  norm.arrayCGH(arrayCGH, flag.list=NULL, var="LogRatio", FUN=median, ...)
+  norm.arrayCGH(arrayCGH, flag.list=NULL, var="LogRatio", printTime=FALSE, FUN=median, ...)
 }
 \arguments{
   \item{arrayCGH}{an object of type \code{arrayCGH}}
   \item{flag.list}{a list of objects of type flag}
   \item{var}{a variable name (from \code{arrayCGH$arrayValues}) from which
     normalization coefficient has to be computed; default is "LogRatio"}
+  \item{printTime}{boolean value; if \code{TRUE}, the time
+      taken by each step of the normalization process is displayed}
   \item{FUN}{an aggregation function (e.g. mean, median) to compute a normalization
     coefficient; default is median}
   \item{...}{further arguments to be passed to FUN}
