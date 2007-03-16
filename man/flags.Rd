@@ -16,6 +16,7 @@
 \alias{spot.flag}
 \alias{unique.flag}
 \alias{val.mark.flag}
+\alias{intensity.flag}
 
 \title{Examples of flag objects to apply to CGH arrays}
 \description{
@@ -48,6 +49,8 @@
     analysis software \cr
     \tab \code{unique.flag} \tab exclude last non-flagged spot of a clone \cr 
     \tab \code{val.mark.flag} \tab flags spots corresponding to bad quality clones \cr
+    \tab \code{intensity.flag} \tab corrects for an intensity effect
+    (using loess regression) \cr
   }
 }
 

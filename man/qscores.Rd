@@ -3,6 +3,7 @@
 \alias{clone.qscore}
 \alias{pct.clone.qscore}
 \alias{pct.spot.qscore}
+\alias{pct.spot.before.qscore}
 \alias{pct.replicate.qscore}
 \alias{smoothness.qscore}
 \alias{dynamics.qscore}
@@ -22,6 +23,7 @@
     \tab \code{clone.qscore} \tab number of clones \cr
     \tab \code{pct.clone.qscore} \tab percentage of clones \cr
     \tab \code{pct.spot.qscore} \tab percentage of spots \cr
+    \tab \code{pct.spot.before.qscore} \tab percentage of spots before normalization\cr
     \tab \code{pct.replicate.qscore} \tab average percentage of replicates \cr
     \tab \code{smoothness.qscore} \tab signal smoothness\cr
     \tab \code{var.replicate.qscore} \tab \cr
