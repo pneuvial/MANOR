@@ -15,6 +15,8 @@
 \alias{num.chromosome.flag}
 \alias{replicate.aux}
 \alias{spot.corr.flag}
+\alias{getChromosomeArm}
+\alias{intensity.plot}
 
 \description{}
 
