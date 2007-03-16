@@ -8,6 +8,6 @@
 .First.lib <- function(lib, pkg){
     library.dynam("MANOR", pkg, lib)
     if (!require(GLAD))
-      stop("Please make sure GLAD is installed before installing MANOR !")
+        stop("Please make sure GLAD is installed before installing MANOR !")
     print("Now entering MANOR...")
 }
