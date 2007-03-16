@@ -12,7 +12,7 @@
 \usage{
   html.report.arrayCGH(array.norm, array.nonorm=NULL, dir.out=".",
 array.name=NULL, x="PosOrder", y=c("LogRatioNorm", "LogRatio"), chrLim=NULL,
-ylim=NULL, zlim=NULL, clim=NULL, light=FALSE, file.name="report",
+ylim=NULL, zlim=NULL, clim=NULL, intensity=NULL, light=FALSE, file.name="report",
 width=10, height=5, ...) 
   html.report.default(spot.data, clone.data=NULL, flag.data=NULL, quality.data=NULL, ...)
 }
@@ -44,6 +44,10 @@ width=10, height=5, ...)
     \code{\link{report.plot}}: color range of the genomic profile}
   \item{zlim}{a numeric vector of length 2 to be passed to
     \code{\link{report.plot}}: color range for array image display}
+  \item{intensity}{an optional list with names c("M.var", "A.var",
+    "pred.var", "span"). The first 3 items specify existing variable names
+    from \code{arrayCGH\$arrayValues} that will be used to draw a
+    MA-plot. The last item is the value of the loess 'span'}
   \item{light}{boolean value: if (light), only the core of the html file
     is generated; if (!light), a complete html file is generated}
   \item{file.name}{file name of the generated report (defaults to
@@ -57,11 +61,14 @@ width=10, height=5, ...)
 \details{
   This function creates an HTML report file showing
   - the array image and the genome representation before normalization
-  (if \code{array.nonorm} is provided) and after normalization
+  (if \code{array.nonorm} is provided) and after normalization, and
+  optionally a MA-plot
   - a table with information about the number of flagged spots for each
   flag, and the number of remaining spots after normalization
   - a table with information about various quality criteria for the
   array
+
+  In order 
 }
 
 \author{Pierre Neuvial, \email{manor@curie.fr}.}
