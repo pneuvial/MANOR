@@ -53,7 +53,7 @@
 
 \begin{document}
 \title{\bf MANOR: Micro-Array NORmalization of array-CGH data}
-\author{Pierre Neuvial$^{\rm ~1}$, Philippe Hupé$^{\rm ~1,2}$, Isabel Brito$^{\rm ~1}$, Emmanuel Barillot$^{\rm ~1}$}
+\author{Pierre Neuvial$^{\rm ~1}$, Philippe Hup\'e$^{\rm ~1,2}$, Isabel Brito$^{\rm ~1}$, Emmanuel Barillot$^{\rm ~1}$}
 \maketitle
 
 \begin{center}
