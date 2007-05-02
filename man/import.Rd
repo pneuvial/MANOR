@@ -59,8 +59,8 @@
   \item{id.rep}{index of the replicate identifier (e.g. the name of the clone) in the
   vector(clone.names)}
   \item{design}{a numeric vector of length 4 specifying array design as
-    number of blocks per row, number of blocks per column, number of
-    rows per block, number of columns by block. This field is mandatory
+    number of blocks per column, number of blocks per row, number of columns by block, number of
+    rows per block. This field is mandatory
     for "default" text files, optional for "gpr" files, and not used for
     "SPOT" files}
   \item{add.lines}{boolean value to handle the case when array design
