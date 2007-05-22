@@ -31,7 +31,7 @@ nem.default <- function(LogRatio, Col, Row, nk=nk, beta=1, iters=2000, ...) {
     if(iters < 100)
         stop("iters must be >= 100")
 
-    row.names(data) <- 1:length(data[[variable]])
+    row.names(data) <- 1:dim(data)[1]
     data <- data[order(data$Col,data$Row),]
 
     res <- .C("nem",
@@ -60,7 +60,7 @@ nem.arrayCGH <- function(arrayCGH, variable, nk=5, beta=1, iters=2000, ...) {
 
     if(length(which(names(arrayCGH$arrayValues)==variable))<1)
         stop(paste("variable",variable,"not found",sep=" "))
-    
+
     if(length(arrayCGH$arrayValues[[variable]])!=length(na.omit(arrayCGH$arrayValues[[variable]])))
         stop("NA's are not allowed")
 

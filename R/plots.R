@@ -15,14 +15,14 @@ genome.plot.arrayCGH <- function(arrayCGH, x="PosOrder", y="LogRatio", chrLim=NU
 
     data <- data.frame(x=xx, y=yy)
 
-    if (!is.null(chrLim)) 
+    if (!is.null(chrLim))
         data <- cbind(data, chrLim=arrayCGH$cloneValues[[chrLim]])
 
     if (is.null(col.var)) {
         col.var <- y
     }
     z <- arrayCGH$cloneValues[[col.var]]
-    
+
     if (class(z)=="numeric") {
         if (length(clim)!=2)
             clim <- c(quantile(z, 0.05, na.rm=TRUE), quantile(z, 0.95, na.rm=TRUE))
@@ -59,7 +59,7 @@ genome.plot.default <- function(data, pch=NULL, cex=NULL, xlab="", ylab="", ...)
         "Genome position"
     else
         xlab
-    
+
     ylab <- if(!nchar(ylab))
         "DNA Copy Number Variation"
     else ylab
@@ -68,7 +68,7 @@ genome.plot.default <- function(data, pch=NULL, cex=NULL, xlab="", ylab="", ...)
         plot(data$y~data$x, col=as.character(data$col), pch=pch, cex=cex, xlab=xlab, ylab=ylab, ...)
     else
         plot(data$y~data$x, pch=pch, cex=cex, xlab=xlab, ...)
-    
+
     if (!is.null(data$chrLim))
     {
         w <- which(data$chrLim==1)
@@ -101,7 +101,7 @@ report.plot.default <- function(spot.data, clone.data, design, x="PosOrder", y=c
     y.spot <- y[1]
     y.clone <- y[2]
 
-    my.arrayPlot.arrayCGH(arrayCGH, y.spot, main="Array image", bar="horizontal", mediancenter=TRUE, zlim=zlim)
+    arrayPlot.arrayCGH(arrayCGH, y.spot, main="Array image", bar="horizontal", mediancenter=TRUE, zlim=zlim)
     if (is.null(main))
         main <- "Pan-genomic representation"
     genome.plot(arrayCGH, x=x, y=y.clone, main=main, chrLim=chrLim, ...)

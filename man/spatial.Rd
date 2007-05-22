@@ -12,7 +12,6 @@
   This data set provides an example of array-CGH data with spatial
   artifacts, consisting of including \code{\link[GLAD]{arrayCGH}}
   objects before and after normalization}
-}
 
 \details{
   'edge' presents local spatial bias in the top-right edge corner, and

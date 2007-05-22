@@ -1,4 +1,4 @@
-## useful auxiliary functions 
+## useful auxiliary functions
 
 ## Copyright (C) 2004 Institut Curie
 ## Author(s): Pierre Neuvial (Institut Curie) 2004
@@ -32,7 +32,7 @@ my.aggregate.data.frame <- function (x, by, FUN, ...)
     x <- as.data.frame(x)
     b <- x[, by]
     y <- lapply(x, tapply, list(b), FUN, ..., simplify = FALSE)
-    if (any(sapply(unlist(y, recursive = FALSE), length) > 1)) 
+    if (any(sapply(unlist(y, recursive = FALSE), length) > 1))
         stop("`FUN' must always return a scalar")
     y <- data.frame(lapply(y, unlist, use.names = FALSE))
     names(y) <- c(names(x))
@@ -89,14 +89,15 @@ add.lines <- function(data, sep="_")
     x1 <- data[[1]]
     x2 <- data[[2]]
     x3 <- data[[3]]
-    
+
     test <- merge(data.frame(x1=1:max(x1)), data.frame(x2=1:max(x2)))
     test <- merge(data.frame(x3=1:max(x3)), test)
 
     sample <- paste(x1, x2, x3, sep=sep)
     patron <- paste(test$x1, test$x2, test$x3, sep=sep)
 
-    if(dim(test)[1]!=dim(r)[1])
+##    if(dim(test)[1]!=dim(r)[1])
+    if(dim(test)[1]!=dim(data)[1])
     {
         ## design is now compatible with the number of rows in the input file
         w <- which(is.na(match(patron, sample)))              # locate discrepencies
