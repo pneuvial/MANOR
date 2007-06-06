@@ -123,5 +123,6 @@ ylim=c(-3,2))
 
 \references{
   P. Neuvial, P. Hupé, I. Brito, S. Liva, E. Manié, C. Brennetot,
-    A. Aurias, F. Radvanyi, and E. Barillot. \emph{Spatial normalization of array-CGH data}. Under revision.
+    A. Aurias, F. Radvanyi, and E. Barillot. \emph{Spatial normalization
+      of array-CGH data}. BMC Bioinformatics, 7(1):264. May 2006.
 }
