@@ -1,7 +1,7 @@
 \name{sort.arrayCGH}
 \alias{sort.arrayCGH}
 
-\title{sort clone-level information of a normalizaed arrayCGH object}
+\title{sort clone-level information of a normalized arrayCGH object}
 \description{
 }
 
