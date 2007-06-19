@@ -120,7 +120,7 @@ center <-  function(data, var, by.var) {
 }
 
 getChromosomeArm <- function(arrayCGH, chrVar="Chromosome", posVar="Position") {
-    data(cytoband)
+    data("cytoband")
     chrArmVar <- "ChromosomeArm"
     chrNumVar <- paste(chrVar, "num", sep=".")
     centromere <- cytoband[which(cytoband$Centro==1),]

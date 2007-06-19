@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{detectSB}
 \alias{detectSB}
 \alias{detectSB.default}

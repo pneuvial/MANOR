@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{arrayTrend}
 \alias{arrayTrend}
 \alias{arrayTrend.default}

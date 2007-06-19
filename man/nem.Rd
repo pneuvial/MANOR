@@ -1,3 +1,4 @@
+\encoding{latin1}
 \name{nem}
 \alias{nem}
 \alias{nem.default}
