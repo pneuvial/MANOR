@@ -544,7 +544,7 @@ static void CalcError                /*V1.04-e*/
 /* ------------------------------------------------------------------- */
 int ClassifyByNem                                             /*V1.04-a*/
         ( 
-          const NemParaT      *NemParaP,        /* I */
+          NemParaT      *NemParaP,        /* I */
           const SpatialT      *SpatialP,        /* I */
           DataT               *DataP,           /* I/O */
           StatModelT          *StatModelP,      /* I/O */
@@ -569,7 +569,7 @@ int ClassifyByNem                                             /*V1.04-a*/
 
     case BETA_HEUD:
     case BETA_HEUL:
-      sts = ClassifyByNemHeuBeta( DataP, (NemParaT*) NemParaP, SpatialP, 
+      sts = ClassifyByNemHeuBeta( DataP, NemParaP, SpatialP, 
 				  StatModelP, ClassifM, CriterP ) ;
       break ;
 

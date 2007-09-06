@@ -9,7 +9,7 @@
 
     int ClassifyByNem
         ( 
-          const NemParaT      *NemParaP,        /* I */
+          NemParaT      *NemParaP,        /* I */
           const SpatialT      *SpatialP,        /* I */
           DataT               *DataP,           /* I/O */
           StatModelT          *StatModelP,      /* I/O */
