@@ -6,8 +6,8 @@
 }
 
 \usage{
-  sort.arrayCGH(x, decreasing = FALSE, position.var="Position",
-chromosome.var="Chromosome", ...)
+  \method{sort}{arrayCGH}(x, decreasing = FALSE, position.var="Position",
+chromosome.var="Chromosome", \ldots)
 }
 
 \arguments{
@@ -15,7 +15,7 @@ chromosome.var="Chromosome", ...)
   \item{decreasing}{(for compatibility with \code{sort} class) currently unused}
   \item{position.var}{}
   \item{chromosome.var}{}
-  \item{...}{further arguments to be passed to \code{sort}}
+  \item{\ldots}{further arguments to be passed to \code{sort}}
 }
 
 \details{

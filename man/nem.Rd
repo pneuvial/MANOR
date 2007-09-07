@@ -7,11 +7,10 @@
 \description{
 The function \code{nem} computes spatial classification by EM algorithm.}
 \usage{
-nem.default(LogRatio, Col, Row, nk=nk, beta=1, iters=2000, ...)
-nem.arrayCGH(arrayCGH, variable, nk=5, beta=1, iters=2000, ...)
-
-
+\method{nem}{default}(LogRatio, Col, Row, nk=nk, beta=1, iters=2000, \ldots)
+\method{nem}{arrayCGH}(arrayCGH, variable, nk=5, beta=1, iters=2000, \ldots)
 }
+
 \arguments{
   \item{LogRatio}{Vector that corresponds to the values to be classified.}
   \item{Col}{Vector of columns coordinates.}
@@ -21,7 +20,7 @@ nem.arrayCGH(arrayCGH, variable, nk=5, beta=1, iters=2000, ...)
   \item{iters}{Maximum number of iterations allowed.}
   \item{arrayCGH}{Object of class \code{\link[GLAD]{arrayCGH}}.}
   \item{variable}{Variable that corresponds to the values to be classified.}
-  \item{...}{...}
+  \item{\ldots}{\ldots}
 }
 
 \value{

@@ -10,11 +10,11 @@
 }
 
 \usage{
-  html.report.arrayCGH(array.norm, array.nonorm=NULL, dir.out=".",
+  \method{html.report}{arrayCGH}(array.norm, array.nonorm=NULL, dir.out=".",
 array.name=NULL, x="PosOrder", y=c("LogRatioNorm", "LogRatio"), chrLim=NULL,
 ylim=NULL, zlim=NULL, clim=NULL, intensity=NULL, light=FALSE, file.name="report",
-width=10, height=5, ...) 
-  html.report.default(spot.data, clone.data=NULL, flag.data=NULL, quality.data=NULL, ...)
+width=10, height=5, \ldots) 
+  \method{html.report}{default}(spot.data, clone.data=NULL, flag.data=NULL, quality.data=NULL, \ldots)
 }
 \arguments{
   \item{array.norm}{an object of type \code{arrayCGH} after normalization step}

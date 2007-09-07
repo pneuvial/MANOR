@@ -8,9 +8,9 @@
 }
 
 \usage{
-  genome.plot.arrayCGH(arrayCGH, x="PosOrder", y="LogRatio",
-chrLim=NULL, col.var=NULL, clim=NULL, cex=NULL, pch=NULL, ...)  
-  genome.plot.default(data, pch=NULL, cex=NULL, xlab="", ylab="", ...)} 
+  \method{genome.plot}{arrayCGH}(arrayCGH, x="PosOrder", y="LogRatio",
+chrLim=NULL, col.var=NULL, clim=NULL, cex=NULL, pch=NULL, \ldots)  
+  \method{genome.plot}{default}(data, pch=NULL, cex=NULL, xlab="", ylab="", \ldots)} 
 
 \arguments{
   \item{arrayCGH}{an object of type \code{arrayCGH}}

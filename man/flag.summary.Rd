@@ -21,8 +21,8 @@
 }
 
 \usage{
-flag.summary.arrayCGH(arrayCGH, flag.list, flag.var="Flag", nflab="not flagged", ...)
-flag.summary.default(spot.flags, flag.list, nflab="not flagged", ...)
+\method{flag.summary}{arrayCGH}(arrayCGH, flag.list, flag.var="Flag", nflab="not flagged", \ldots)
+\method{flag.summary}{default}(spot.flags, flag.list, nflab="not flagged", \ldots)
 }
 
 \arguments{

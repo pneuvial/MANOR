@@ -8,9 +8,8 @@
 The function \code{arrayTrend} computes the spatial trend.
 }
 \usage{
-arrayTrend.default(Statistic, Col, Row, ...)
-arrayTrend.arrayCGH(arrayCGH, variable, ...)
-
+\method{arrayTrend}{default}(Statistic, Col, Row, \ldots)
+\method{arrayTrend}{arrayCGH}(arrayCGH, variable, \ldots)
 }
 
 \arguments{

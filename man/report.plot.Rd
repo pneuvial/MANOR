@@ -12,11 +12,11 @@
 
 
 \usage{
-report.plot.arrayCGH(arrayCGH, x="PosOrder", y=c("LogRatioNorm",
-"LogRatio"), chrLim=NULL, layout=TRUE, main=NULL, zlim=NULL, ...)
-report.plot.default(spot.data, clone.data, design, x="PosOrder",
+\method{report.plot}{arrayCGH}(arrayCGH, x="PosOrder", y=c("LogRatioNorm",
+"LogRatio"), chrLim=NULL, layout=TRUE, main=NULL, zlim=NULL, \ldots)
+\method{report.plot}{default}(spot.data, clone.data, design, x="PosOrder",
 y=c("LogRatioNorm", "LogRatio"), chrLim=NULL, layout=TRUE, main=NULL,
-zlim=NULL, ...) 
+zlim=NULL, \ldots) 
 }
 
 \arguments{

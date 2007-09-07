@@ -8,8 +8,8 @@
 This function detects spatial bias on array CGH.
 }
 \usage{
-detectSB.arrayCGH(arrayCGH, variable, proportionup=0.25,
-proportiondown,type="up", thresholdup=0.2, thresholddown=0.2, ... ) 
+\method{detectSB}{arrayCGH}(arrayCGH, variable, proportionup=0.25,
+proportiondown,type="up", thresholdup=0.2, thresholddown=0.2, \ldots ) 
 }
 
 \arguments{
