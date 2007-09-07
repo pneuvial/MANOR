@@ -165,7 +165,7 @@ static int  MakeErrinfo
 /* ------------------------------------------------------------------- */
 {
   StatusET err ;
-  int      *tmpV ;
+  int      *tmpV = 0 ;
   int      ipt ;
 
   if ( strcmp( RefName, "" ) != 0 ) {
