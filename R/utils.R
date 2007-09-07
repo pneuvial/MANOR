@@ -120,6 +120,7 @@ center <-  function(data, var, by.var) {
 }
 
 getChromosomeArm <- function(arrayCGH, chrVar="Chromosome", posVar="Position") {
+    cytoband <- NULL ## avoids a warning when loading cytoband data...
     data("cytoband")
     chrArmVar <- "ChromosomeArm"
     chrNumVar <- paste(chrVar, "num", sep=".")

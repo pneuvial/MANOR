@@ -5,7 +5,7 @@
 ## Contact: manor@curie.fr
 
 
-w <- function(x1="", x2="", x3="", append=TRUE, file=fh)
+w <- function(x1="", x2="", x3="", append=TRUE, file="rpt")
     write(paste(x1, x2, x3, sep=""), append=append, file=file)
 
 html.report <- function(...)
@@ -28,7 +28,7 @@ html.report.arrayCGH <- function(array.norm, array.nonorm=NULL, dir.out=".", arr
     img.nonorm <- paste(an, "_nonorm.png", sep="")
     img.norm <- paste(an, "_norm.png", sep="")
 
-    if(length(y)==1) 
+    if(length(y)==1)
         y <- c(y,y)  ## if only one signal variable name is provided, the same name is taken for clone and spot-level analysis
 
 ### spot- and clone-level flag summary
@@ -70,7 +70,7 @@ html.report.arrayCGH <- function(array.norm, array.nonorm=NULL, dir.out=".", arr
             clim <- c(quantile(clone.var.nonorm, 0.05, na.rm=TRUE), quantile(clone.var.nonorm, 0.95, na.rm=TRUE))
         if (is.null(zlim))
             zlim <- clim
-        
+
         bitmap(paste(dir.out, "/", img.nonorm, sep=""), width=width, height=height, pointsize=10, bg="white")
         ##    bitmap(paste(dir.out, "/", img.nonorm, sep=""), pointsize=10, bg="white")
         ##    png(filename = paste(dir.out, "/", img.nonorm, sep=""), width = 800, height = 300, pointsize = 10, bg = "white")
@@ -110,7 +110,7 @@ html.report.arrayCGH <- function(array.norm, array.nonorm=NULL, dir.out=".", arr
         }
         w("</table>", file=fh)
     }
-    
+
 ### table with array-level quality criteria
     qdf <- array.norm$quality
     if (!is.null(qdf)) {
@@ -126,7 +126,7 @@ html.report.arrayCGH <- function(array.norm, array.nonorm=NULL, dir.out=".", arr
 
     ## end of big table
     w("</table></center>", file=fh)
-    
+
     if (!light) {
         w("</body>", file=fh)
         w("</html>", file=fh)
@@ -137,7 +137,7 @@ html.report.default <- function(spot.data, clone.data=NULL, flag.data=NULL, qual
 ### create an object of type arrayCGH
     array.norm <- list(arrayValues=spot.data, cloneValues=clone.data, quality=quality.data, flags=flag.data)
     class(array.norm) <- "arrayCGH"
-    
+
 ### apply html.report.arrayCGH
     html.report.arrayCGH(array.norm, array.nonorm=NULL, ...)
 }
