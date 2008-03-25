@@ -17,15 +17,8 @@
 \alias{spot.corr.flag}
 \alias{getChromosomeArm}
 \alias{intensity.plot}
-
-\description{}
-
+\description{Internal functions not intended for direct calls by user.}
 \author{Pierre Neuvial, \email{manor@curie.fr}.}
-
 \note{People interested in tools for array-CGH analysis can
   visit our web-page: \url{http://bioinfo.curie.fr}.}
-
 \keyword{internal}
-
-
-

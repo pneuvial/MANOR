@@ -7,7 +7,14 @@
 
 ### coefficient of variation
 cv <- function(x)
-    sd(2^x, na.rm=TRUE)/mean(2^x, na.rm=TRUE)
+{
+	x <- x[!is.na(x)]
+	if(length(x) > 0)
+		ret <- sd(2^x)/mean(2^x)
+	else
+		ret <- as.numeric(NA)
+	ret
+}
 
 ### rename variables of a data.frame
 rename <- function(data, old.vars, new.vars)

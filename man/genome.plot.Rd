@@ -2,16 +2,12 @@
 \alias{genome.plot}
 \alias{genome.plot.default}
 \alias{genome.plot.arrayCGH}
-
-\title{Display a pan-genomic representation of a normalized arrayCGH}
-\description{
-}
-
+\title{Pan-genomic representation of a normalized arrayCGH}
+\description{Displays a pan-genomic representation of a normalized arrayCGH.}
 \usage{
   \method{genome.plot}{arrayCGH}(arrayCGH, x="PosOrder", y="LogRatio",
-chrLim=NULL, col.var=NULL, clim=NULL, cex=NULL, pch=NULL, \ldots)  
+    chrLim=NULL, col.var=NULL, clim=NULL, cex=NULL, pch=NULL, \ldots)  
   \method{genome.plot}{default}(data, pch=NULL, cex=NULL, xlab="", ylab="", \ldots)} 
-
 \arguments{
   \item{arrayCGH}{an object of type \code{arrayCGH}}
   \item{data}{a data frame with two columns: 'x' and 'y', and optionally
@@ -33,18 +29,14 @@ chrLim=NULL, col.var=NULL, clim=NULL, cex=NULL, pch=NULL, \ldots)
     to be used as the default in plotting points: see \code{\link{par}} }
   \item{...}{further arguments to be passed to \code{plot}}
 }
-
 \details{if \code{col.var} is a numeric variable, \code{y} colors are
   proportionnal to \code{col.var} values; if it is a character variable
   or a factor, one color is assigned to each different value of
   \code{col.var}. If \code{col.var} is NULL, colors are proportionnal to
   \code{y} values.}
-
 \author{Pierre Neuvial, \email{manor@curie.fr}.}
-
 \note{People interested in tools for array-CGH analysis can
   visit our web-page: \url{http://bioinfo.curie.fr}.}
-
 \examples{
 data(spatial)
 
@@ -73,6 +65,5 @@ genome.plot(gradient.norm, pch=20, main="Genomic profile with
 normalization", chrLim="LimitChr")   
 }
 }
-
-\keyword{}
 \seealso{\code{\link{flag}}, \code{\link[plot]{report.plot}}}
+\keyword{}
