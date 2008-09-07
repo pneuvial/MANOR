@@ -21,8 +21,10 @@ html: index.dvi
 	$(TEX) $<
 	$(TEX) $<
 
-%.tex: %.Rnw
-	echo "require(MANOR); Sweave(\"$<\")" | R CMD BATCH
+MANOR.tex: MANOR.Rnw
+	echo "require(MANOR); Sweave(\"MANOR.Rnw\")" > tmp.Rnw
+	R CMD BATCH tmp.Rnw
+	rm tmp.Rnw
 
 vignette.tex: MANOR.tex
 	sed -e 's/\\newcommand{\\htmldoc}{}/\\newcommand{\\htmldoc}\[1\]{}/g' -e '/^\\begin{figure}/d' -e '/^\\end{figure}/d' -e '/^\\caption/d' < MANOR.tex > vignette.tex
@@ -41,6 +43,7 @@ clean:
 	rm -f MANOR.dvi MANOR.pdf MANOR.aux MANOR.log MANOR.bbl MANOR.blg MANOR.toc MANOR-*pdf MANOR-*.eps
 	rm -f MANOR-eval*
 	rm -f Rplots.ps
+	rm -f tmp.Rnw
 
 Rnw-eval:
 	sed -e 's/Sinput/verbatim/g' -e 's/Soutput/verbatim/g' -e 's/\\SweaveOpts{echo=FALSE, width=10, height=6, eval=FALSE}/\\SweaveOpts{echo=FALSE, width=10, height=6, eval=TRUE}/g' < MANOR.Rnw > index.Rnw

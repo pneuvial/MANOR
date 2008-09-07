@@ -1,0 +1,4 @@
+2008-09-04:
+- added a CHANGELOG
+- updated outdated reference in the .bib file
+- changed the definition of flag "rep.flag" to avoid the error now caused by sd(NA, na.rm=TRUE)
