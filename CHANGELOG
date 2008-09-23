@@ -1,3 +1,7 @@
+2008-23-09
+- modification de la fonction cv pour retourner NA lorsque toutes la valeurs du vecteur sont à NA
+- modification de la function getChromosomeArm pour que cytoband ne soit pas positionnée à NULL
+
 2008-09-04:
 - added a CHANGELOG
 - updated outdated reference in the .bib file

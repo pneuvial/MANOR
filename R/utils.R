@@ -8,12 +8,21 @@
 ### coefficient of variation
 cv <- function(x)
 {
-	x <- x[!is.na(x)]
-	if(length(x) > 0)
-		ret <- sd(2^x)/mean(2^x)
-	else
-		ret <- as.numeric(NA)
-	ret
+## 	x <- x[!is.na(x)]
+## 	if(length(x) > 0)
+## 		ret <- sd(2^x)/mean(2^x)
+## 	else
+## 		ret <- as.numeric(NA)
+## 	ret
+
+  ### modification de la fonction le 23/09/2008 (P. Hupe)
+  ### permet de retourner NA quand toutes les valeurs de x sont à NA (sinon il y a une erreur)
+  if (length(attr(na.omit(x),"na.action"))==length(x))
+    return(NA)
+  else 
+    return(sd(2^x,na.rm=TRUE)/mean(2^x,na.rm=TRUE))
+
+        
 }
 
 ### rename variables of a data.frame
@@ -128,7 +137,11 @@ center <-  function(data, var, by.var) {
 
 getChromosomeArm <- function(arrayCGH, chrVar="Chromosome", posVar="Position") {
     cytoband <- NULL ## avoids a warning when loading cytoband data...
-    data("cytoband")
+    
+    data("cytoband") ### l'appel de la fonction data crée l'objet cytoband dans .GlobalEnv
+
+    cytoband <- get("cytoband", envir=.GlobalEnv) ### on récupère l'objet cytoband contenu dans .GlobalEnv car sinon il reste positionné à NULL
+    
     chrArmVar <- "ChromosomeArm"
     chrNumVar <- paste(chrVar, "num", sep=".")
     centromere <- cytoband[which(cytoband$Centro==1),]
