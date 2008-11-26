@@ -41,7 +41,7 @@ The function \code{arrayTrend} computes the spatial trend.
 
 \seealso{\code{\link[modreg]{loess}}, \code{\link[modreg]{loess.control}}.}
 
-\keyword{}
+\keyword{spatial,trend}
 
 \examples{
 data(spatial)  ## arrays with local spatial effects

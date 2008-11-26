@@ -66,5 +66,5 @@ print("Flag and normalization parameters summary")
 print(fs)
 }
 
-\keyword{}
+\keyword{flag,summary}
 \seealso{\code{\link{html.report}}, \code{\link{flag}}}

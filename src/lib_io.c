@@ -351,7 +351,7 @@ int CountLinesColumns          /* 0/1 = same/dif. nb of col, -1 = problem */
     FILE*   finp ;                  /* input file handler */
     char    line[ LEN_LINE + 1 ] ;  /* last line read */
     int     nblines ;
-    int     mincols , maxcols ;
+    int     mincols , maxcols = 0;
     int     noteq ;
 
 

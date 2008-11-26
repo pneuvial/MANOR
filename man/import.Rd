@@ -98,5 +98,5 @@ spot.names=spot.names, clone.names=clone.names, sep="\t",
 comment.char="@", add.lines=TRUE) 
 }
 
-\keyword{}
+\keyword{import,read}
 \seealso{\code{\link[GLAD]{arrayCGH}}}

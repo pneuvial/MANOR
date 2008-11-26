@@ -86,5 +86,5 @@ summary.factor(gradient$arrayValues$Flag)   ## permanent flags
 summary.factor(gradient$arrayValues$FlagT)  ## temporary flags
 }
 
-\keyword{}
+\keyword{flag}
 \seealso{\code{\link{flag.arrayCGH}}, \code{\link{norm.arrayCGH}}}

@@ -1628,7 +1628,7 @@ static StatusET RandNemAlgo
   float*    bestCen_KD ;  /* to allocate */ /*V1.06-q*/
   float*    bestDis_KD ;  /* to allocate */
   float     initbeta ; /* specified initial value of beta */
-  float     bestbeta ; /* beta of best classification */
+  float     bestbeta = 0 ; /* beta of best classification */
 
 
   InitPara( DataP, DescP, SpecP, 

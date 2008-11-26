@@ -67,8 +67,6 @@ width=10, height=5, \ldots)
   flag, and the number of remaining spots after normalization
   - a table with information about various quality criteria for the
   array
-
-  In order 
 }
 
 \author{Pierre Neuvial, \email{manor@curie.fr}.}
@@ -76,7 +74,5 @@ width=10, height=5, \ldots)
 \note{People interested in tools for array-CGH analysis can
   visit our web-page: \url{http://bioinfo.curie.fr}.}
 
-\examples{}
-
-\keyword{}
+\keyword{summary,report}
 \seealso{\code{\link{flag.summary}}, \code{\link[plot]{report.plot}}}

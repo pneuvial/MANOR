@@ -67,5 +67,5 @@ gradient <- flag.arrayCGH(unique.flag, gradient)
 summary.factor(gradient$arrayValues$Flag)
 }
 
-\keyword{}
+\keyword{flag}
 \seealso{\code{\link{flag}}, \code{\link{norm.arrayCGH}}}

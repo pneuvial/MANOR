@@ -119,7 +119,7 @@ main="Pangenomic representation (after normalization)", zlim=c(-2,2),
 ylim=c(-3,2)) 
 }
 
-\keyword{}
+\keyword{normalization}
 \seealso{\code{\link{flag}}}
 
 \references{

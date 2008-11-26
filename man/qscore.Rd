@@ -33,8 +33,5 @@
 \note{People interested in tools for array-CGH analysis can
   visit our web-page: \url{http://bioinfo.curie.fr}.}
 
-\examples{
-}
-
-\keyword{}
+\keyword{quality,score}
 \seealso{\code{\link{qscore.arrayCGH}}, \code{\link{qscore.summary.arrayCGH}}}

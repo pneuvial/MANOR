@@ -66,4 +66,4 @@ normalization", chrLim="LimitChr")
 }
 }
 \seealso{\code{\link{flag}}, \code{\link[plot]{report.plot}}}
-\keyword{}
+\keyword{plot,genomic}

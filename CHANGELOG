@@ -1,4 +1,9 @@
-2008-23-09
+2008-11-26
+- filled in "keyword" sections in .Rd files.
+- removed empty "examples" sections from .Rd files.
+- initialized a few variables upon declaration in C code to prevent warnings in R CMD CHECK.
+
+2008-09-23
 - modification de la fonction cv pour retourner NA lorsque toutes la valeurs du vecteur sont à NA
 - modification de la function getChromosomeArm pour que cytoband ne soit pas positionnée à NULL
 
