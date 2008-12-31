@@ -72,4 +72,4 @@ report.plot(gradient.norm, chrLim="LimitChr", layout=FALSE,
 main="Pangenomic representation (after normalization)", zlim=c(-2,2),
 ylim=c(-3,2)) 
 }
-\keyword{summary,quality,plot}
+\keyword{hplot}

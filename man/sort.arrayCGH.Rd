@@ -25,4 +25,4 @@ gradient.norm <- sort.arrayCGH(gradient.norm)
 report.plot(gradient.norm, main="Genomic profile after normalization")
 }
 \seealso{\code{\link{norm.arrayCGH}}}
-\keyword{sort,genomic}
+\keyword{utilities}

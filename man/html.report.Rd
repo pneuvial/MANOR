@@ -74,5 +74,5 @@ width=10, height=5, \ldots)
 \note{People interested in tools for array-CGH analysis can
   visit our web-page: \url{http://bioinfo.curie.fr}.}
 
-\keyword{summary,report}
+\keyword{IO}
 \seealso{\code{\link{flag.summary}}, \code{\link[plot]{report.plot}}}

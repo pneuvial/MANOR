@@ -20,4 +20,4 @@ qscore.arrayCGH(smoothness.qscore, edge.norm)
 qscore.arrayCGH(smoothness.qscore, gradient.norm)
 }
 \seealso{\code{\link{qscore}}, \code{\link{qscore.summary}}}
-\keyword{quality,scores}
+\keyword{misc}

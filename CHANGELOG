@@ -1,3 +1,7 @@
+2008-12-31
+- now use standard "keyword"s
+- changed \link{\code{stuff}} into \code{\link{stuff}}
+
 2008-11-26
 - filled in "keyword" sections in .Rd files.
 - removed empty "examples" sections from .Rd files.

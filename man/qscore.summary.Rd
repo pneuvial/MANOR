@@ -52,5 +52,5 @@ edge.norm$quality <- qscore.summary.arrayCGH(edge.norm, qscore.list)
 print(edge.norm$quality[, 2:3])
 }
 
-\keyword{quality,score,summary}
+\keyword{misc}
 \seealso{\code{\link{qscore}}, \code{\link{qscore.summary}}, \code{\link{html.report}}}
