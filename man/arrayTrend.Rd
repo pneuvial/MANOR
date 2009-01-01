@@ -26,7 +26,7 @@ The function \code{arrayTrend} computes the spatial trend.
 
 \value{
   Either a data frame with elements :
-  \item{Trend} {Trend fitted by \code{\link[modreg]{loess}} function.}
+  \item{Trend}{Trend fitted by \code{\link[modreg]{loess}} function.}
   \item{Col}
   \item{Row}
 
@@ -41,7 +41,9 @@ The function \code{arrayTrend} computes the spatial trend.
 
 \seealso{\code{\link[modreg]{loess}}, \code{\link[modreg]{loess.control}}.}
 
-\keyword{smooth,loess,spatial}
+\keyword{smooth}
+\keyword{loess}
+\keyword{spatial}
 
 \examples{
 data(spatial)  ## arrays with local spatial effects

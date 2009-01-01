@@ -47,7 +47,8 @@ The function \code{nem} computes spatial classification by EM algorithm.}
 }
 
 
-\keyword{spatial,models}
+\keyword{spatial}
+\keyword{models}
 
 
 \author{Philippe Hupé, \email{manor@curie.fr}.}

@@ -1,3 +1,6 @@
+2009-01-01
+- only one keyword per \keyword entry...
+
 2008-12-31
 - now use standard "keyword"s
 - changed \link{\code{stuff}} into \code{\link{stuff}}

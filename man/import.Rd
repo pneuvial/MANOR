@@ -98,5 +98,6 @@ spot.names=spot.names, clone.names=clone.names, sep="\t",
 comment.char="@", add.lines=TRUE) 
 }
 
-\keyword{IO,file}
+\keyword{IO}
+\keyword{file}
 \seealso{\code{\link[GLAD]{arrayCGH}}}
