@@ -51,7 +51,7 @@ proportiondown,type="up", thresholdup=0.2, thresholddown=0.2, \ldots )
 
 \seealso{\code{\link{arrayTrend}}, \code{\link{nem}}}
 
-\keyword{model}
+\keyword{models}
 \keyword{spatial}
 
 \examples{
