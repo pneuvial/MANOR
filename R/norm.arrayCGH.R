@@ -4,6 +4,8 @@
 ## Author(s): Pierre Neuvial (Institut Curie) 2004
 ## Contact: manor@curie.fr
 
+norm <- function(...)
+    UseMethod("norm")
 
 norm.arrayCGH <- function(arrayCGH, flag.list=NULL, var="LogRatio", printTime=FALSE, FUN=median, ...) {
     var.norm <- paste(var, "Norm", sep="")

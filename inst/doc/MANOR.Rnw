@@ -8,18 +8,8 @@
 \usepackage{amsmath}
 \usepackage[authoryear,round]{natbib}
 \usepackage{html, float}
-%\usepackage{Sweave} % not understood by latex2html :(
+\usepackage{Sweave} % not understood by latex2html :(
 % add the content of Sweave.sty :-/
-\RequirePackage[T1]{fontenc}
-\RequirePackage{graphicx,ae,fancyvrb}
-\IfFileExists{upquote.sty}{\RequirePackage{upquote}}{}
-\setkeys{Gin}{width=0.8\textwidth}
-
-\DefineVerbatimEnvironment{Sinput}{Verbatim}{fontshape=sl}
-\DefineVerbatimEnvironment{Soutput}{Verbatim}{}
-\DefineVerbatimEnvironment{Scode}{Verbatim}{fontshape=sl}
-
-\newenvironment{Schunk}{}{}
 
 \usepackage{cite}
 \usepackage{graphicx}

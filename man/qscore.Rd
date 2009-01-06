@@ -6,8 +6,6 @@
   \code{qscore} object is a list which contains a function, a name, and
   optionnally a label and arguments to be passed to the function.
 }
-\details{
-}
 
 \value{
   An object of class \code{qscore}.

@@ -1,6 +1,5 @@
 \name{flag}
 \alias{to.flag}
-\alias{flag}
 \title{Create an object of type flag}
 \description{
   A \code{flag} object is a list which contains essentially a function

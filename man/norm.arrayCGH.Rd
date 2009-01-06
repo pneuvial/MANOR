@@ -1,6 +1,7 @@
 \encoding{latin1}
 \name{norm.arrayCGH}
 \alias{norm.arrayCGH}
+\alias{norm}
 \alias{MANOR}
 \alias{manor}
 

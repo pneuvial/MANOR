@@ -141,3 +141,4 @@ html.report.default <- function(spot.data, clone.data=NULL, flag.data=NULL, qual
 ### apply html.report.arrayCGH
     html.report.arrayCGH(array.norm, array.nonorm=NULL, ...)
 }
+

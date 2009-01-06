@@ -1,3 +1,9 @@
+2009-01-04
+- (almost) one file per function in R/
+- removed empty section \details in man/qscore.Rd
+- added a NAMESPACE
+- removed inst/doc/Makefile (not needed anymore because no html output required)
+
 2009-01-02
 - removed another non-standard keyword
 

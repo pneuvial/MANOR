@@ -1,5 +1,6 @@
 \name{flag.arrayCGH}
 \alias{flag.arrayCGH}
+\alias{flag}
 \title{Apply a flag to an arrayCGH}
 \description{
   Function \code{flag$FUN} is applied to a \code{flag} object for
