@@ -47,8 +47,8 @@ data(spatial)
 ### edge: local spatial bias
 ## aggregate arrayCGH without normalization for comparison with
 ## normalized array
-edge.nonorm <- norm.arrayCGH(edge, flag.list=NULL, FUN=median, na.rm=TRUE) 
-edge.nonorm <- sort.arrayCGH(edge.nonorm, position.var="PosOrder")
+edge.nonorm <- norm(edge, flag.list=NULL, FUN=median, na.rm=TRUE) 
+edge.nonorm <- sort(edge.nonorm, position.var="PosOrder")
 
 layout(matrix(c(1,2,4,5,3,3,6,6), 4,2),width=c(1, 4), height=c(6,1,6,1))
 report.plot(edge.nonorm, chrLim="LimitChr", layout=FALSE,
@@ -61,8 +61,8 @@ ylim=c(-3,1))
 ### gradient: global array Trend
 ## aggregate arrayCGH without normalization for comparison with
 ## normalized array
-gradient.nonorm <- norm.arrayCGH(gradient, flag.list=NULL, FUN=median, na.rm=TRUE) 
-gradient.nonorm <- sort.arrayCGH(gradient.nonorm)
+gradient.nonorm <- norm(gradient, flag.list=NULL, FUN=median, na.rm=TRUE) 
+gradient.nonorm <- sort(gradient.nonorm)
 
 layout(matrix(c(1,2,4,5,3,3,6,6), 4,2),width=c(1, 4), height=c(6,1,6,1))
 report.plot(gradient.nonorm, chrLim="LimitChr", layout=FALSE,

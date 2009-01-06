@@ -1,5 +1,5 @@
 \encoding{latin1}
-\name{norm.arrayCGH}
+\name{norm}
 \alias{norm.arrayCGH}
 \alias{norm}
 \alias{MANOR}
@@ -35,8 +35,9 @@
 }
 
 \usage{
-  norm.arrayCGH(arrayCGH, flag.list=NULL, var="LogRatio", printTime=FALSE, FUN=median, ...)
+  \method{norm}{arrayCGH}(arrayCGH, flag.list=NULL, var="LogRatio", printTime=FALSE, FUN=median, ...)
 }
+
 \arguments{
   \item{arrayCGH}{an object of type \code{arrayCGH}}
   \item{flag.list}{a list of objects of type flag}
@@ -72,17 +73,17 @@ flag.list1$spot$char <- "O"
 flag.list1$spot$label <- "Image analysis"
 
 ## normalize arrayCGH
-\dontrun{edge.norm <- norm.arrayCGH(edge, flag.list=flag.list1,
+\dontrun{edge.norm <- norm(edge, flag.list=flag.list1,
 var="LogRatio", FUN=median, na.rm=TRUE)} 
 print(edge.norm$flags) ## spot-level flag summary (computed by flag.summary)
 
 ## aggregate arrayCGH without normalization
-edge.nonorm <- norm.arrayCGH(edge, flag.list=NULL, var="LogRatio",
+edge.nonorm <- norm(edge, flag.list=NULL, var="LogRatio",
 FUN=median, na.rm=TRUE)  
 
 ## sort genomic informations 
-edge.norm <- sort.arrayCGH(edge.norm, position.var="PosOrder")
-edge.nonorm <- sort.arrayCGH(edge.nonorm, position.var="PosOrder")
+edge.norm <- sort(edge.norm, position.var="PosOrder")
+edge.nonorm <- sort(edge.nonorm, position.var="PosOrder")
 
 ## plot genomic profiles
 layout(matrix(c(1,2,4,5,3,3,6,6), 4,2),width=c(1, 4), height=c(6,1,6,1))
@@ -102,13 +103,13 @@ flag.list2 <- list(
   chromosome=chromosome.flag)
 
 ## normalize arrayCGH
-\dontrun{gradient.norm <- norm.arrayCGH(gradient, flag.list=flag.list2, var="LogRatio", FUN=median, na.rm=TRUE) }
+\dontrun{gradient.norm <- norm(gradient, flag.list=flag.list2, var="LogRatio", FUN=median, na.rm=TRUE) }
 ## aggregate arrayCGH without normalization
-gradient.nonorm <- norm.arrayCGH(gradient, flag.list=NULL, var="LogRatio", FUN=median, na.rm=TRUE) 
+gradient.nonorm <- norm(gradient, flag.list=NULL, var="LogRatio", FUN=median, na.rm=TRUE) 
 
 ## sort genomic informations 
-gradient.norm <- sort.arrayCGH(gradient.norm)
-gradient.nonorm <- sort.arrayCGH(gradient.nonorm)
+gradient.norm <- sort(gradient.norm)
+gradient.nonorm <- sort(gradient.nonorm)
 
 ## plot genomic profiles
 layout(matrix(c(1,2,4,5,3,3,6,6), 4,2),width=c(1, 4), height=c(6,1,6,1))

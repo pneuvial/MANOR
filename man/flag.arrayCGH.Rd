@@ -69,4 +69,4 @@ summary.factor(gradient$arrayValues$Flag)
 }
 
 \keyword{misc}
-\seealso{\code{\link{flag}}, \code{\link{norm.arrayCGH}}}
+\seealso{\code{\link{to.flag}}, \code{\link{norm.arrayCGH}}}

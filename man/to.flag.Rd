@@ -1,4 +1,4 @@
-\name{flag}
+\name{to.flag}
 \alias{to.flag}
 \title{Create an object of type flag}
 \description{

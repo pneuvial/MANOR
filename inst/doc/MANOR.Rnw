@@ -327,7 +327,7 @@ edge <- import(paste(dir.in, "/edge.txt", sep=""), type="spot",
 spot.names=spot.names, clone.names=clone.names, add.lines=TRUE)
 @
 
-\subsubsection{Normalization: \Rfunction{norm.arrayCGH}}
+\subsubsection{Normalization: \Rfunction{norm}}
 \htmldoc{Figure \ref{fig:edge-norm} shows the results of the normalization process.}
 <<echo=TRUE>>=
 data(flags)
@@ -337,8 +337,8 @@ data(spatial)
 local.spatial.flag$args <- alist(var="ScaledLogRatio", by.var=NULL, nk=5, prop=0.25, thr=0.15, beta=1, family="gaussian")
 flag.list <- list(spatial=local.spatial.flag, spot=spot.corr.flag, ref.snr=ref.snr.flag, dapi.snr=dapi.snr.flag, rep=rep.flag, unique=unique.flag)
 
-edge.norm <- norm.arrayCGH(edge, flag.list=flag.list, FUN=median, na.rm=TRUE)
-edge.norm <- sort.arrayCGH(edge.norm, position.var="PosOrder")
+edge.norm <- norm(edge, flag.list=flag.list, FUN=median, na.rm=TRUE)
+edge.norm <- sort(edge.norm, position.var="PosOrder")
 @
 
 \SweaveOpts{width=14,height=6}
@@ -410,7 +410,7 @@ ac$arrayValues$LogRatio <- log(Ratio, 2)
 gradient <- ac
 @
 
-\subsubsection{Normalization: \Rfunction{norm.arrayCGH}}
+\subsubsection{Normalization: \Rfunction{norm}}
 \htmldoc{Figure \ref{fig:gradient-norm} shows the results of the normalization process.}
 
 <<echo=TRUE>>=
@@ -419,8 +419,8 @@ data(flags)
 
 flag.list <- list(local.spatial=local.spatial.flag, spot=spot.flag, SNR=SNR.flag, global.spatial=global.spatial.flag, val.mark=val.mark.flag, position=position.flag, unique=unique.flag, amplicon=amplicon.flag, chromosome=chromosome.flag, replicate=replicate.flag)
 
-gradient.norm <- norm.arrayCGH(gradient, flag.list=flag.list, FUN=median, na.rm=TRUE)
-gradient.norm <- sort.arrayCGH(gradient.norm)
+gradient.norm <- norm(gradient, flag.list=flag.list, FUN=median, na.rm=TRUE)
+gradient.norm <- sort(gradient.norm)
 @
 
 \begin{figure}[!htp] \centering

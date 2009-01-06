@@ -76,7 +76,7 @@ flag.list1 <- list(local.spatial=local.spatial.flag,
   replicate=replicate.flag)
 
 data(spatial)
-\dontrun{gradient.norm <- norm.arrayCGH(gradient, flag.list=flag.list1,
+\dontrun{gradient.norm <- norm(gradient, flag.list=flag.list1,
 var="LogRatio", FUN=median, na.rm=TRUE)}
 print(gradient.norm$flags) ## spot-level flag summary (computed by flag.summary)
 
@@ -92,7 +92,7 @@ flag.list2$spot$args <- alist(var="SpotFlag")
 flag.list2$spot$char <- "O"
 flag.list2$spot$label <- "Image analysis"
 
-\dontrun{edge.norm <- norm.arrayCGH(edge, flag.list=flag.list2,
+\dontrun{edge.norm <- norm(edge, flag.list=flag.list2,
 var="LogRatio", FUN=median, na.rm=TRUE)} 
 print(edge.norm$flags) ## spot-level flag summary (computed by flag.summary)
 }

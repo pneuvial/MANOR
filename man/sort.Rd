@@ -1,6 +1,7 @@
-\name{sort.arrayCGH}
+\name{sort}
 \alias{sort.arrayCGH}
-\title{Sort for normalized arrayCGH objects}
+\alias{sort}
+\title{Sorting for normalized arrayCGH objects}
 \description{Sorts clone-level information of a normalized arrayCGH object.}
 \usage{
   \method{sort}{arrayCGH}(x, decreasing = FALSE, position.var="Position",
@@ -20,7 +21,7 @@
 data(spatial)
 
 ## sort a normalized array by clone position
-gradient.norm <- sort.arrayCGH(gradient.norm)
+gradient.norm <- sort(gradient.norm)
 
 report.plot(gradient.norm, main="Genomic profile after normalization")
 }

@@ -53,9 +53,9 @@ genome.plot(edge.norm, col.var="ZoneGNL")
 ## comparing profiles with and without normalization
 ## aggregate data without normalization (flags)
 
-gradient.nonorm <- norm.arrayCGH(gradient, flag.list=NULL, var="LogRatio",
+gradient.nonorm <- norm(gradient, flag.list=NULL, var="LogRatio",
 FUN=median, na.rm=TRUE)
-gradient.nonorm <- sort.arrayCGH(gradient.nonorm)
+gradient.nonorm <- sort(gradient.nonorm)
 
 \dontrun{
 genome.plot(gradient.nonorm, pch=20, main="Genomic profile without

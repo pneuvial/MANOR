@@ -58,7 +58,7 @@ flag.list$spot$char <- "O"
 flag.list$spot$label <- "Image analysis"
 
 ## normalize arrayCGH
-\dontrun{edge.norm <- norm.arrayCGH(edge, flag.list=flag.list,
+\dontrun{edge.norm <- norm(edge, flag.list=flag.list,
 var="LogRatio", FUN=median, na.rm=TRUE)} 
 fs <- flag.summary(edge.norm, flag.list=flag.list, flag.var="Flag")
 
