@@ -34,16 +34,16 @@ The function \code{nem} computes spatial classification by EM algorithm.}
 }
 
 \references{
-\item{ }{C. Ambroise, \emph{Approche probabiliste en classification automatique et contraintes de voisinage}, Ph.D. thesis, Université de Technologie de Compiègne, 1996.}
-\item{ }{C. Ambroise, M. Dang, and G. Govaert, \emph{Clustering of
+C. Ambroise, \emph{Approche probabiliste en classification automatique et contraintes de voisinage}, Ph.D. thesis, Université de Technologie de Compiègne, 1996.
+
+C. Ambroise, M. Dang, and G. Govaert, \emph{Clustering of
     spatial data by the em algorithm} in Geostatistics for Environmental
   Applications, A. Soares, J. Gomez-Hernandez, and R. Froidevaux, Eds.,
-  pp. 493-504. Kluwer Academic Publisher, 1997.}
+  pp. 493-504. Kluwer Academic Publisher, 1997.
 
-\item{ }{P. Neuvial, P. Hupé, I. Brito, S. Liva, E. Manié, C. Brennetot,
+P. Neuvial, P. Hupé, I. Brito, S. Liva, E. Manié, C. Brennetot,
   A. Aurias, F. Radvanyi, and E. Barillot. \emph{Spatial normalization
-    of array-CGH data}. In preparation.
-  }
+    of array-CGH data}. BMC Bioinformatics, 7(1):264. May 2006.
 }
 
 

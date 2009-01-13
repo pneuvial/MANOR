@@ -27,8 +27,8 @@ The function \code{arrayTrend} computes the spatial trend.
 \value{
   Either a data frame with elements :
   \item{Trend}{Trend fitted by \code{\link[modreg]{loess}} function.}
-  \item{Col}
-  \item{Row}
+  \item{Col}{Vector of columns coordinates.}
+  \item{Row}{Vector of rows coordinates.}
 
   or the element \code{Trend} is added to the data.frame \code{arrayValues}
   of the \code{arrayCGH} object.
@@ -56,6 +56,6 @@ arrayPlot(edgeTrend, "Trend", main="Spatial trend of array CGH", bar="v")
 \references{
   P. Neuvial, P. Hupé, I. Brito, S. Liva, E. Manié, C. Brennetot,
   A. Aurias, F. Radvanyi, and E. Barillot. \emph{Spatial normalization
-    of array-CGH data}. In preparation.
+    of array-CGH data}. BMC Bioinformatics, 7(1):264. May 2006.
 }
 
