@@ -29,17 +29,16 @@
 \usage{data(spatial)}
 
 \format{
-  \item{edge, gradient}{\code{\link[GLAD]{arrayCGH}}
-    objects before normalization:
-    \tabular{lll}{
-      \tab \code{arrayValues} \tab spot-level information \cr
-      \tab \code{arrayDesign} \tab block design of the array \cr
-      \tab \code{cloneValues} \tab additionnal clone-level data (chromosome,
-      position) \cr
+  \itemize{
+    \item{edge, gradient}{\code{\link[GLAD]{arrayCGH}}
+      objects before normalization:
+      \tabular{lll}{
+	\tab \code{arrayValues} \tab spot-level information \cr
+   	\tab \code{arrayDesign} \tab block design of the array \cr
+	\tab \code{cloneValues} \tab additionnal clone-level data (chromosome, position) \cr
+      }
     }
-  }
-  \item{edge.norm, gradient.norm}{\code{\link[GLAD]{arrayCGH}}
-    objects after normalization
+    \item{edge.norm, gradient.norm}{\code{\link[GLAD]{arrayCGH}} \tab objects after normalization}
   }
 }
 

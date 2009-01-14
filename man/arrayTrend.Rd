@@ -19,8 +19,7 @@ The function \code{arrayTrend} computes the spatial trend.
   \item{arrayCGH}{Object of class \code{\link[GLAD]{arrayCGH}}.}
   \item{variable}{Variable to be smooth.}
   \item{...}{Parameters to be passed to \code{\link[modreg]{loess}} function.}
-
-  }
+}
 
 \details{Spatial trend of microarray spots statistic.}
 
@@ -29,7 +28,6 @@ The function \code{arrayTrend} computes the spatial trend.
   \item{Trend}{Trend fitted by \code{\link[modreg]{loess}} function.}
   \item{Col}{Vector of columns coordinates.}
   \item{Row}{Vector of rows coordinates.}
-
   or the element \code{Trend} is added to the data.frame \code{arrayValues}
   of the \code{arrayCGH} object.
 }
