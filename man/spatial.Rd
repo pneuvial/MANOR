@@ -38,7 +38,7 @@
 	\tab \code{cloneValues} \tab additionnal clone-level data (chromosome, position) \cr
       }
     }
-    \item{edge.norm, gradient.norm}{\code{\link[GLAD]{arrayCGH}} \tab objects after normalization}
+    \item{edge.norm, gradient.norm}{\code{\link[GLAD]{arrayCGH}} objects after normalization}
   }
 }
 

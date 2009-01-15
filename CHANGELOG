@@ -1,3 +1,6 @@
+2009-01-15
+- misplaced alignment tab in man/spatial.Rd.
+
 2009-01-13
 - updated references in .Rd files.
 - fixed warnings due to incorrect use of \item in .Rd files.
