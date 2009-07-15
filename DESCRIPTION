@@ -10,4 +10,4 @@ Description: We propose importation, normalization, visualization, and
 	     of variability in array-CGH experiments.
 License: GPL
 URL: http://bioinfo.curie.fr/projects/manor/index.html
-biocViews: Microarray, TwoChannel, DataImport, QualityControl, Preprocessing, DNACopyNumber
+biocViews: Microarray, TwoChannel, DataImport, QualityControl, Preprocessing, CopyNumberVariants
