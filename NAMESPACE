@@ -1,34 +1,3 @@
-useDynLib(MANOR)
-
-export(to.flag,to.qscore,import,center,cv)
-export(norm.arrayCGH,flag.arrayCGH,sort.arrayCGH,qscore.arrayCGH,qscore.summary.arrayCGH,flag.summary.arrayCGH,flag.summary.default)
-
-export(norm)
-S3method(norm, arrayCGH)
-
-export(sort)
-S3method(sort, arrayCGH)
-
-export(arrayTrend)
-S3method(arrayTrend, arrayCGH)
-
-export(detectSB)
-S3method(detectSB, arrayCGH)
-
-export(flag.summary)
-S3method(flag.summary, arrayCGH)
-S3method(flag.summary, default)
-
-export(html.report)
-S3method(html.report, arrayCGH)
-
-export(nem)
-S3method(nem, arrayCGH)
-
-export(genome.plot)
-S3method(genome.plot, arrayCGH)
-
-export(report.plot)
-S3method(report.plot, arrayCGH)
-
-S3method(print, flag)
+exportPattern("^[[:alpha:]]+")
+useDynLib("MANOR")
+.onLoad()
