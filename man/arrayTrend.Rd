@@ -18,14 +18,14 @@ The function \code{arrayTrend} computes the spatial trend.
   \item{Row}{Vector of rows coordinates.}
   \item{arrayCGH}{Object of class \code{\link[GLAD]{arrayCGH}}.}
   \item{variable}{Variable to be smooth.}
-  \item{...}{Parameters to be passed to \code{\link[modreg]{loess}} function.}
+  \item{...}{Parameters to be passed to \code{\link[stats]{loess}} function.}
 }
 
 \details{Spatial trend of microarray spots statistic.}
 
 \value{
   Either a data frame with elements :
-  \item{Trend}{Trend fitted by \code{\link[modreg]{loess}} function.}
+  \item{Trend}{Trend fitted by \code{\link[stats]{loess}} function.}
   \item{Col}{Vector of columns coordinates.}
   \item{Row}{Vector of rows coordinates.}
   or the element \code{Trend} is added to the data.frame \code{arrayValues}
@@ -37,7 +37,7 @@ The function \code{arrayTrend} computes the spatial trend.
 \note{People interested in tools for array-CGH analysis can
   visit our web-page: \url{http://bioinfo.curie.fr}.}
 
-\seealso{\code{\link[modreg]{loess}}, \code{\link[modreg]{loess.control}}.}
+\seealso{\code{\link[stats]{loess}}, \code{\link[stats]{loess.control}}.}
 
 \keyword{smooth}
 \keyword{loess}

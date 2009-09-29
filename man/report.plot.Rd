@@ -37,7 +37,7 @@
   \item{\dots}{further arguments to be passed to \code{\link{genome.plot}}.}
 }
 \details{This function successively calls \code{\link[GLAD]{arrayPlot}} and \code{\link{genome.plot}}.}
-\seealso{\code{\link[plot]{genome.plot}}, \code{\link[GLAD]{arrayPlot}}, \code{\link{html.report}}}
+\seealso{\code{\link[MANOR]{genome.plot}}, \code{\link[GLAD]{arrayPlot}}, \code{\link{html.report}}}
 \author{Pierre Neuvial, \email{manor@curie.fr}.}
 \note{People interested in tools for array-CGH analysis can
   visit our web-page: \url{http://bioinfo.curie.fr}.}
