@@ -65,5 +65,5 @@ genome.plot(gradient.norm, pch=20, main="Genomic profile with
 normalization", chrLim="LimitChr")   
 }
 }
-\seealso{\code{\link{flag}}, \code{\link[plot]{report.plot}}}
+\seealso{\code{\link{flag}}, \code{\link{report.plot}}}
 \keyword{hplot}
