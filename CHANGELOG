@@ -1,3 +1,6 @@
+2010-01-24
+- Added (back) 'intensity.flag' to 'data/flags.RData' (had been removed since v 1.12.0 for an unknown reason).
+
 2009-01-15
 - misplaced alignment tab in man/spatial.Rd.
 
