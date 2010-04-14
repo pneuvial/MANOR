@@ -1,3 +1,11 @@
-exportPattern("^[[:alpha:]]+")
 useDynLib("MANOR")
-.onLoad()
+
+importFrom("GLAD", "arrayPlot", "arrayPlot.arrayCGH", "ChrNumeric",
+           "myPalette")
+importFrom("graphics", "abline", "plot", "points")
+importFrom("grDevices", "bitmap", "dev.off", "rainbow")
+importFrom("stats", "aggregate", "median", "na.omit", "predict",
+           "quantile", "sd")
+importFrom("utils", "data", "read.delim", "write.table")
+
+exportPattern("^[[:alpha:]]+")

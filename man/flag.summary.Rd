@@ -37,7 +37,7 @@
   \item{spot.flags}{a character vector containing information about
     flags}
   \item{nflab}{a character vector providing a legend for "not flagged" spots}
-  \item{...}{}
+  \item{\ldots}{\ldots}
 }
 
 \author{Pierre Neuvial, \email{manor@curie.fr}.}

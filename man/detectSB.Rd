@@ -25,13 +25,13 @@ proportiondown,type="up", thresholdup=0.2, thresholddown=0.2, \ldots )
     bias with low values) or "upanddown" (to detect both type of spatial bias).}
   \item{thresholdup}{Threshold used to detect spatial bias with high values.}
   \item{thresholddown}{Threshold used to detect spatial bias with low values.}
-  \item{...}{}
+  \item{\ldots}{\ldots}
 }
 
 
-\details{You must run the \code{\link{arrayTrend}} and \code{\link{nem}} function before detecting
-  spatial bias: the \code{\link{arrayTrend}} computes a spatial trend
-  and the \code{\link{nem}} function performs a
+\details{You must run the \code{\link{arrayTrend}} and \code{\link{nem}}
+  function before detecting spatial bias: the \code{\link{arrayTrend}}
+  computes a spatial trend and the \code{\link{nem}} function performs a
   classification with spatial constraints defining different zones on
   the array. Based on those results, spatial bias is detected.}
 

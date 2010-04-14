@@ -1,10 +1,11 @@
 Package: MANOR
-Version: 1.19.1
-Date: 2010-01-24
+Version: 1.19.2
+Date: 2010-04-13
 Title: CGH Micro-Array NORmalization
 Author: Pierre Neuvial <pierre.neuvial@curie.fr>, Philippe Hupe <philippe.hupe@curie.fr>
 Maintainer: Pierre Neuvial <pierre.neuvial@curie.fr>
-Depends: R(>= 1.8.0), GLAD
+Depends: R (>= 1.8.0), GLAD
+Imports: GLAD, graphics, grDevices, stats, utils
 Description: Importation, normalization, visualization, and
 	     quality control functions to correct identified sources 
 	     of variability in array-CGH experiments.
