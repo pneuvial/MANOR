@@ -1,0 +1,46 @@
+2010-10-01
+o Cleaned 'data/flags.RData" which contained objects from an old 'globalenv'.
+o Updated maintainer's email address.
+
+2010-01-24
+o Added (back) 'intensity.flag' to 'data/flags.RData' (had been removed since v 1.12.0 for an unknown reason).
+
+2009-01-15
+o misplaced alignment tab in man/spatial.Rd.
+
+2009-01-13
+o updated references in .Rd files.
+o fixed warnings due to incorrect use of \item in .Rd files.
+
+2009-01-06
+o 'norm' and 'sort' are now S3 methods as well
+
+2009-01-04
+o (almost) one file per function in R/
+o removed empty section \details in man/qscore.Rd
+o added a NAMESPACE
+o removed inst/doc/Makefile (not needed anymore because no html output required)
+
+2009-01-02
+o removed another non-standard keyword
+
+2009-01-01
+o only one keyword per \keyword entry...
+
+2008-12-31
+o now use standard "keyword"s
+o changed \link{\code{stuff}} into \code{\link{stuff}}
+
+2008-11-26
+o filled in "keyword" sections in .Rd files.
+o removed empty "examples" sections from .Rd files.
+o initialized a few variables upon declaration in C code to prevent warnings in R CMD CHECK.
+
+2008-09-23
+o modification de la fonction cv pour retourner NA lorsque toutes la valeurs du vecteur sont à NA
+o modification de la function getChromosomeArm pour que cytoband ne soit pas positionnée à NULL
+
+2008-09-04:
+o added a CHANGELOG
+o updated outdated reference in the .bib file
+o changed the definition of flag "rep.flag" to avoid the error now caused by sd(NA, na.rm=TRUE)
