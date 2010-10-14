@@ -466,6 +466,15 @@ The version number of R and packages loaded for generating this document are:
 sessionInfo()
 @
 
+% A silly work-around for the 'R CMD build' intermittent issue on Windows:
+% * creating vignettes ...Warning in file(con, "r") :
+%   cannot open file 'D:\biocbld\bbs-2.7-bioc\tmpdir\Rtmp6N8fzb\xshell3bf51a24': Permission denied
+%   Error in file(con, "r") : cannot open the connection
+%   Execution halted
+<<echo=FALSE>>=
+Sys.sleep(10)
+@
+
 \htmldoc{
 \section{Supplementary data} \label{sec:suppl-data}
 The package \Rpackage{MANOR} provides sample gpr and spot files, as examples to the \Rfunction{import} funciton. However, due to space limitations, only the first 100 lines these file are provided in the current distribution of \Rpackage{MANOR}. The full files can be downloaded from here:
