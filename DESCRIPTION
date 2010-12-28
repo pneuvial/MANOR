@@ -1,6 +1,6 @@
 Package: MANOR
-Version: 1.23.0
-Date: 2010-10-15
+Version: 1.23.1
+Date: 2010-12-28
 Title: CGH Micro-Array NORmalization
 Author: Pierre Neuvial <pierre.neuvial@gmail.com>, Philippe Hupe <philippe.hupe@curie.fr>
 Maintainer: Pierre Neuvial <pierre.neuvial@gmail.com>
