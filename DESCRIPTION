@@ -1,5 +1,5 @@
 Package: MANOR
-Version: 1.23.1
+Version: 1.23.2
 Date: 2010-12-28
 Title: CGH Micro-Array NORmalization
 Author: Pierre Neuvial <pierre.neuvial@gmail.com>, Philippe Hupe <philippe.hupe@curie.fr>
@@ -9,6 +9,6 @@ Imports: GLAD, graphics, grDevices, stats, utils
 Description: Importation, normalization, visualization, and
 	     quality control functions to correct identified sources 
 	     of variability in array-CGH experiments.
-License: GPL
+License: GPL-2
 URL: http://bioinfo.curie.fr/projects/manor/index.html
 biocViews: Microarray, TwoChannel, DataImport, QualityControl, Preprocessing, CopyNumberVariants
