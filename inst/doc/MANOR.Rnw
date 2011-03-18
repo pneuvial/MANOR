@@ -361,7 +361,7 @@ dev.off()
 ##DNA copy number assessment: GLAD
 profileCGH <- as.profileCGH(edge.norm$cloneValues)
 
-profileCGH <- daglad(profileCGH, smoothfunc="lawsglad", lkern="Exponential", model="Gaussian", qlambda=0.999,  bandwidth=10, base=FALSE, round=2, lambdabreak=6, lambdaclusterGen=20, param=c(d=6), alpha=0.001, msize=5, method="centroid", nmin=1, nmax=8, amplicon=1, deletion=-5, deltaN=0.10,  forceGL=c(-0.15,0.15), nbsigma=3, MinBkpWeight=0.35, verbose=FALSE)
+profileCGH <- daglad(profileCGH, smoothfunc="lawsglad", lkern="Exponential", model="Gaussian", qlambda=0.999,  bandwidth=10, base=FALSE, round=2, lambdabreak=6, lambdaclusterGen=20, param=c(d=6), alpha=0.001, msize=2, method="centroid", nmin=1, nmax=8, amplicon=1, deletion=-5, deltaN=0.10,  forceGL=c(-0.15,0.15), nbsigma=3, MinBkpWeight=0.35, verbose=FALSE)
 
 edge.norm$cloneValues <- as.data.frame(profileCGH)
 edge.norm$cloneValues$ZoneGNL <- as.factor(edge.norm$cloneValues$ZoneGNL)
@@ -436,7 +436,7 @@ genome.plot(gradient.norm, chrLim="LimitChr", cex=1)
 ##DNA copy number assessment: GLAD
 profileCGH <- as.profileCGH(gradient.norm$cloneValues)
 
-profileCGH <- daglad(profileCGH, smoothfunc="lawsglad", lkern="Exponential", model="Gaussian", qlambda=0.999,  bandwidth=10, base=FALSE, round=2, lambdabreak=6, lambdaclusterGen=20, param=c(d=6), alpha=0.001, msize=5, method="centroid", nmin=1, nmax=8, amplicon=1, deletion=-5, deltaN=0.10,  forceGL=c(-0.15,0.15), nbsigma=3, MinBkpWeight=0.35, verbose=FALSE)
+profileCGH <- daglad(profileCGH, smoothfunc="lawsglad", lkern="Exponential", model="Gaussian", qlambda=0.999,  bandwidth=10, base=FALSE, round=2, lambdabreak=6, lambdaclusterGen=20, param=c(d=6), alpha=0.001, msize=2, method="centroid", nmin=1, nmax=8, amplicon=1, deletion=-5, deltaN=0.10,  forceGL=c(-0.15,0.15), nbsigma=3, MinBkpWeight=0.35, verbose=FALSE)
 
 gradient.norm$cloneValues <- as.data.frame(profileCGH)
 gradient.norm$cloneValues$ZoneGNL <- as.factor(gradient.norm$cloneValues$ZoneGNL)

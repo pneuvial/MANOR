@@ -1,3 +1,7 @@
+2011-03-18
+o Updated calls to 'GLAD:::daglad' in the vignette to fix an error
+caused by changes in the defaults of 'daglad'.
+
 2010-10-01
 o Cleaned 'data/flags.RData" which contained objects from an old 'globalenv'.
 o Updated maintainer's email address.
