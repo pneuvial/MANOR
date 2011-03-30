@@ -318,7 +318,7 @@ In this section we illustrate the use of \Rpackage{MANOR} on two CGH arrays. Our
 \subsubsection{Data preparation: \Rfunction{import}}
 
 <<echo=TRUE>>=
-dir.in <- system.file("data", package="MANOR")
+dir.in <- system.file("extdata", package="MANOR")
 
 ## import from 'spot' files
 spot.names <- c("LogRatio", "RefFore", "RefBack", "DapiFore", "DapiBack", "SpotFlag", "ScaledLogRatio")

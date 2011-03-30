@@ -80,7 +80,7 @@
   visit our web-page: \url{http://bioinfo.curie.fr}.}
 
 \examples{
-dir.in <- system.file("data", package="MANOR")
+dir.in <- system.file("extdata", package="MANOR")
 
 ## import from 'spot' files
 spot.names <- c("LogRatio", "RefFore", "RefBack", "DapiFore", "DapiBack", "SpotFlag", "ScaledLogRatio")
