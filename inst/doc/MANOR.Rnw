@@ -472,7 +472,7 @@ sessionInfo()
 %   Error in file(con, "r") : cannot open the connection
 %   Execution halted
 <<echo=FALSE>>=
-Sys.sleep(10)
+Sys.sleep(20)
 @
 
 \htmldoc{
