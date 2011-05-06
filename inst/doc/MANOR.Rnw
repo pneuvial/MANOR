@@ -247,10 +247,6 @@ arrayPlot(gradient, "LogRatio", main="Spatial gradient" , zlim=c(-2,2), mediance
 \caption{\emph{Example of array with spatial gradient}.} \label{fig:gradient}
 \end{figure}
 
-<<term=FALSE>>=
-dev.off()
-@
-
 \section{Graphical representations} \label{sec:graph}
 \setkeys{Gin}{width=0.8\linewidth}
 
@@ -305,10 +301,6 @@ report.plot(edge.norm, chrLim="LimitChr", zlim=c(-1,1), cex=1)
 \caption{\emph{\Rfunction{report.plot}: array image and pan-genomic profile after normalization.}} \label{fig:report.plot}
 \end{figure}
 
-<<term=FALSE>>=
-dev.off()
-@
-
 \section{Sample {\tt MANOR} sessions} \label{sec:session}
 In this section we illustrate the use of \Rpackage{MANOR} on two CGH arrays. Our examples contain several steps, including data preparation, flag definition, array normalization, quality criteria definition, and quality assessment of the array, and highlights of the normalization process.
 
@@ -347,10 +339,6 @@ report.plot(edge.norm, chrLim="LimitChr", zlim=c(-1,1), cex=1)
 \caption{\emph{array 'edge' after normalization}.}  \label{fig:edge-norm}
 \end{figure}
 \SweaveOpts{width=10,height=6}
-
-<<term=FALSE>>=
-dev.off()
-@
 
 \subsubsection{Quality assessment: \Rfunction{qscore.summary.arrayCGH}}
 
