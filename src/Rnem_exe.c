@@ -176,7 +176,7 @@ static int  MakeErrinfo
     for ( ipt = 0, err = STS_OK ; 
 	  ( ipt < N ) && ( err == STS_OK ) ; ipt ++ ) {
       if ( ( tmpV[ ipt ] <= 0 ) || ( tmpV[ ipt ] > ErrinfoP->Kr ) ) {
-	fprintf( stderr, 
+	Rprintf( 
 		 "Reference class for point %d not in 1..%d \n", 
 		 ipt + 1, ErrinfoP->Kr ) ;
 	err = STS_E_FILE ;
@@ -349,7 +349,7 @@ static int  SetImageNeigh
         if ( ( neighV = GenAlloc( 4, sizeof( INeighT ),
 				  0, "SetImageNeigh", "neighV" ) ) == NULL )
         {
-            fprintf( stderr, "Could not allocate %d image neighbours\n",
+            Rprintf( "Could not allocate %d image neighbours\n",
                      4 ) ;
             return STS_E_MEMORY ;
         }
@@ -378,7 +378,7 @@ static int  SetImageNeigh
         break ;
 
     default :
-        fprintf( stderr, "Unknown neighborhood type (%d)\n", NeighSpec ) ;
+        Rprintf( "Unknown neighborhood type (%d)\n", NeighSpec ) ;
         return STS_E_FUNCARG ;
     }
 
@@ -431,9 +431,9 @@ static int GetInputParaPHUPE
     /* Read neighborhood file */
     if ( SpatialP->Type != TYPE_NONSPATIAL )
     {
-    	fprintf(stderr, "\n************************************************\n" ) ;
-	fprintf(stderr, "*** Spatial Classification with EM algorithm ***\n" ) ;
-	fprintf(stderr, "************************************************\n\n" ) ;
+    	Rprintf("\n************************************************\n" ) ;
+	Rprintf("*** Spatial Classification with EM algorithm ***\n" ) ;
+	Rprintf("************************************************\n\n" ) ;
         if ( ( err = ReadNeiFilePHUPE( NemParaP->NeighSpec , neidescS, SpatialP ) ) != STS_OK )
                 return err ;
     }
@@ -443,36 +443,35 @@ static int GetInputParaPHUPE
         SpatialP->MaxNeighs   = 0 ;
     }
 
-    fprintf( stderr, "\nData : " ) ;
+    Rprintf( "\nData : " ) ;
     
 
-    fprintf( stderr, "  nb points   = %10d\n", DataP->NbPts ) ;
+    Rprintf( "  nb points   = %10d\n", DataP->NbPts ) ;
     if ( SpatialP->Type == TYPE_IMAGE )
     {
-     fprintf( stderr, "  grid size =  %4d rows, %4d columns\n", SpatialP->NeighData.Image.Nc,
+     Rprintf( "  grid size =  %4d rows, %4d columns\n", SpatialP->NeighData.Image.Nc,
              SpatialP->NeighData.Image.Nl ) ;
     }
     if ( DataP->NbMiss > 0 ) /*V1.05-a*/
     {
-    fprintf( stderr, "  %d missing values / %d\n",
+    Rprintf( "  %d missing values / %d\n",
 	     DataP->NbMiss, DataP->NbPts * DataP->NbVars ) ;
     }
 
-    fprintf(stderr,"\n");
+    Rprintf("\n");
 
     if ( SpatialP->Type != TYPE_NONSPATIAL )
     {
-    fprintf( stderr, "Neighborhood system :\n  max neighb =  %10d\n",
+    Rprintf( "Neighborhood system :\n  max neighb =  %10d\n",
              SpatialP->MaxNeighs ) ;
-    fprintf( stderr, "%s\n", neidescS ) ;
+    Rprintf( "%s\n", neidescS ) ;
     }
 
-    fprintf( stderr, "\n" ) ;
-    fprintf( stderr, "NEM parameters :\n" ) ;
-    fprintf( stderr,
-	     "  beta       =  %10.2f   |   nk                    = %3d\n",
+    Rprintf( "\n" ) ;
+    Rprintf( "NEM parameters :\n" ) ;
+    Rprintf( "  beta       =  %10.2f   |   nk                    = %3d\n",
              StatModelP->Para.Beta, StatModelP->Spec.K) ;
-    fprintf( stderr, "\n" ) ;
+    Rprintf( "\n" ) ;
 
 
     return STS_OK ;
@@ -583,7 +582,7 @@ void nem (float *vector, int *Nl, int *Nc, int *Nvars, int *Nclasses, float *bet
 	
 	ClassifyByNem( &NemPara, &Spatial, &Data, &StatModel, ClassifM, &Criteria ) ;
 
-	fprintf(stderr,"\n");
+	Rprintf("\n");
 
 	SaveResultsPHUPE(Data.NbPts,Data.NbVars,ClassifM, &Spatial, &NemPara, &StatModel, &Criteria, res);
 

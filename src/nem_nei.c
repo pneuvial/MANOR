@@ -57,7 +57,7 @@ int GetSpatialFunc  /* STS_OK or STS_E_FUNCARG */
 
         default :
              *GetNeighFP = NULL ;
-                fprintf( stderr, "GetSpatialFuncs bad arg : Type = %d\n",
+                Rprintf( "GetSpatialFuncs bad arg : Type = %d\n",
                          SpatialType ) ;
         return STS_E_FUNCARG ;
     }

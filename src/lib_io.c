@@ -102,7 +102,7 @@ int AskFileToRead           /* ret : 0 if OK, -1 if problem */
           nbask ++ )
     {
         if ( nbask == 1 )
-            printf( "Name of  %s  file  (RETURN to quit) : ", Desc ) ;
+            Rprintf( "Name of  %s  file  (RETURN to quit) : ", Desc ) ;
 
         gets( NameF ) ;
 
@@ -117,11 +117,11 @@ int AskFileToRead           /* ret : 0 if OK, -1 if problem */
             }
             else
             {
-                printf( " '%s' does not exist. " , NameF ) ;
+                Rprintf( " '%s' does not exist. " , NameF ) ;
                 if ( nbask < MAX_ASK )
-                    printf( "Please type again : " ) ;
+                    Rprintf( "Please type again : " ) ;
                 else
-                    printf( "\n" ) ;
+                    Rprintf( "\n" ) ;
                 exists = FALSE ;
             }
         }
@@ -154,7 +154,7 @@ int AskFileToWrite          /* ret : 0 if OK, -1 if problem */
         FILE*   f ;
         int     accept ;
 
-        printf( "Name of  %s  file to create : " , Desc ) ;
+        Rprintf( "Name of  %s  file to create : " , Desc ) ;
         gets( NameF ) ;
 
         if ( strlen(NameF) != 0 )
@@ -170,7 +170,7 @@ int AskFileToWrite          /* ret : 0 if OK, -1 if problem */
 
                 fclose( f ) ;   /* after successful open "r" , close file */
 
-                printf( "File %s already exists. Overwrite it ? (y/n/q) " ,
+                Rprintf( "File %s already exists. Overwrite it ? (y/n/q) " ,
                         NameF ) ;
 
                 c = getchar() ;
@@ -194,7 +194,7 @@ int AskFileToWrite          /* ret : 0 if OK, -1 if problem */
                 }
                 else
                 {
-                    printf( " Cannot create '%s' (check name/permission)\n" ,
+                    Rprintf( " Cannot create '%s' (check name/permission)\n" ,
                             NameF ) ;
                 }
             }
@@ -230,7 +230,7 @@ int AskInteger              /* ret : 0 if OK, -1 if problem */
     {
         char    stringread[ 132 + 1 ] ;
 
-        printf( "Enter  %s  ( %d <= n <= %d )  [%d]  : " , 
+        Rprintf( "Enter  %s  ( %d <= n <= %d )  [%d]  : " , 
                 Desc , Min , Max , Def ) ;
         gets( stringread ) ;
 
@@ -241,7 +241,7 @@ int AskInteger              /* ret : 0 if OK, -1 if problem */
             {
                 numberok = TRUE ;
             }
-            else printf( " Invalid number\n" ) ;
+            else Rprintf( " Invalid number\n" ) ;
         }
         else
         {
@@ -278,7 +278,7 @@ int AskFloat                /* ret : 0 if OK, -1 if problem */
     {
         char    stringread[ 132 + 1 ] ;
 
-        printf( "Enter  %s  ( %g <= n <= %g )  [%g]  : " , 
+        Rprintf( "Enter  %s  ( %g <= n <= %g )  [%g]  : " , 
                 Desc , Min , Max , Def ) ;
         gets( stringread ) ;
 
@@ -289,7 +289,7 @@ int AskFloat                /* ret : 0 if OK, -1 if problem */
             {
                 numberok = TRUE ;
             }
-            else printf( " Invalid number\n" ) ;
+            else Rprintf( " Invalid number\n" ) ;
         }
         else
         {
@@ -357,7 +357,7 @@ int CountLinesColumns          /* 0/1 = same/dif. nb of col, -1 = problem */
 
     if ( ( finp = fopen( NameF , "r" ) ) == NULL )
     {
-        printf( "Error : can't open file %s\n" , NameF ) ;
+        Rprintf( "Error : can't open file %s\n" , NameF ) ;
         return -1 ;
     }
 
@@ -433,7 +433,7 @@ int ReadSelectedColumns        /* 0 = OK , -1 = problem */
     /* Open file */
     if ( ( finp = fopen( NameF , "r" ) ) == NULL )
     {
-        printf( " Error : can't open file %s\n" , NameF ) ;
+        Rprintf( " Error : can't open file %s\n" , NameF ) ;
         return -1 ;
     }
 
@@ -457,7 +457,7 @@ int ReadSelectedColumns        /* 0 = OK , -1 = problem */
                         }
                         else
                         {
-                          printf( " In '%s', [%d,%d] = '%s' not a number\n" ,
+                          Rprintf( " In '%s', [%d,%d] = '%s' not a number\n" ,
                                     NameF , i + 1 , c + 1 , field ) ;
                           ok = FALSE ;
                         }
@@ -466,7 +466,7 @@ int ReadSelectedColumns        /* 0 = OK , -1 = problem */
             } /* end - if read successful for element [i,c] */
             else 
             {
-                printf( " File '%s', cannot read line %d, column %d\n" ,
+                Rprintf( " File '%s', cannot read line %d, column %d\n" ,
                         NameF , i + 1 , c + 1 ) ;
                 ok = FALSE ;
             }
@@ -501,14 +501,14 @@ main()
 
   if ( sts != -1 )
     {
-      printf( "Comments %s of file %s :\n%s\n" , 
+      Rprintf( "Comments %s of file %s :\n%s\n" , 
              (sts == 1) ? "(shortened)" : "",  FNAME , comS ) ;
-      printf( "Remaining lines : \n" ) ;
+      Rprintf( "Remaining lines : \n" ) ;
 
       while( !feof( f ) )
         {
           if ( fgets( line , LEN_LINE , f ) != NULL ) 
-            printf( line ) ;
+            Rprintf( line ) ;
         }
       fclose( f ) ;
     }
@@ -527,7 +527,7 @@ main()
 
     sts = AskFileToRead( "test" , fname ) ;
 
-    printf( "*** AskFileToRead returned file name '%s' (status %d)\n" ,
+    Rprintf( "*** AskFileToRead returned file name '%s' (status %d)\n" ,
             fname , sts ) ;
     return sts ;
 }
@@ -545,7 +545,7 @@ main()
 
     sts = AskFileToWrite( "test" , TRUE, fname ) ;
 
-    printf( "*** AskFileToWrite returned file name '%s' (status %d)\n" ,
+    Rprintf( "*** AskFileToWrite returned file name '%s' (status %d)\n" ,
             fname , sts ) ;
     return sts ;
 }
@@ -565,7 +565,7 @@ main( int argc , char *argv[] )
     sts = AskInteger( "test number" , atoi( argv[1] ) , atoi( argv[2] ) ,
                       atoi( argv[3] ) , & n ) ;
 
-    printf( "*** AskInteger returned '%d' (status %d)\n" ,
+    Rprintf( "*** AskInteger returned '%d' (status %d)\n" ,
             n , sts ) ;
     return sts ;
 }
@@ -585,7 +585,7 @@ main( int argc , char *argv[] )
     sts = AskFloat( "test number" , atof( argv[1] ) , atof( argv[2] ) ,
                       atoi( argv[3] ) , & x ) ;
 
-    printf( "*** AskFloat returned '%f' (status %d)\n" ,
+    Rprintf( "*** AskFloat returned '%f' (status %d)\n" ,
             x , sts ) ;
     return sts ;
 }
@@ -602,7 +602,7 @@ main( int argc , char *argv[] )
 
     sts = CountTokens( argv[1] , argv[2] ) ;
 
-    printf( "*** CountTokens( '%s' , '%s' )  returned '%d'\n" , 
+    Rprintf( "*** CountTokens( '%s' , '%s' )  returned '%d'\n" , 
             argv[1] , argv[2] , sts ) ;
     return sts ;
 }
@@ -621,9 +621,9 @@ main( int argc , char *argv[] )
 
     sts = CountLinesColumns( argv[1] , argv[2] , &minc , &maxc , &nbl ) ;
 
-    printf( "*** CountLinesColumns( '%s' , '%s' ) returned '%d'\n" , 
+    Rprintf( "*** CountLinesColumns( '%s' , '%s' ) returned '%d'\n" , 
             argv[1] , argv[2] , sts ) ;
-    printf( "*** minc = %d   maxc = %d    nbl = %d\n" , minc,maxc,nbl ) ;
+    Rprintf( "*** minc = %d   maxc = %d    nbl = %d\n" , minc,maxc,nbl ) ;
 
     return sts ;
 }
@@ -652,7 +652,7 @@ main( int argc , char *argv[] )
 
     sts = CountLinesColumns( argv[1] , " " , &minc , &nbc , &nbl ) ;
     if ( sts != 0 )
-    { printf( "Error : CountLinesColumns returned %d\n" , sts ) ;
+    { Rprintf( "Error : CountLinesColumns returned %d\n" , sts ) ;
       return 2 ; }
 
     if ( ( ptM = malloc( nbl * nbsel * sizeof( float ) ) ) == NULL )
@@ -660,7 +660,7 @@ main( int argc , char *argv[] )
 
     sts = ReadSelectedColumns( argv[1] , nbl , nbc , nbsel , selcV , ptM ) ;
 
-    printf( "*** ReadSelectedColumns( '%s' , %d , %d , %d , [%d,%d,%d] ) returned '%d'\n" , 
+    Rprintf( "*** ReadSelectedColumns( '%s' , %d , %d , %d , [%d,%d,%d] ) returned '%d'\n" , 
             argv[1] , nbl , nbc , nbsel , selcV[ 0 ] , selcV[ 1 ] , 
             selcV[ 2 ] , sts ) ;
 
@@ -669,10 +669,10 @@ main( int argc , char *argv[] )
 
         for ( i = 0 ; i < nbl ; i ++ )
         {
-            printf( "*** Pt %d : " , i + 1 ) ;
+            Rprintf( "*** Pt %d : " , i + 1 ) ;
             for ( s = 0 ; s < nbsel ; s ++ )
-                printf( "  %4.2f" , ptM[ i * nbsel + s ] ) ;
-            printf( "\n" ) ;
+                Rprintf( "  %4.2f" , ptM[ i * nbsel + s ] ) ;
+            Rprintf( "\n" ) ;
         }
     }
 

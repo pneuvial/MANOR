@@ -131,7 +131,7 @@ int main( int argc, char *argv[] )
     {
       int r = RandomInteger( mini , maxi  ) ;
 
-      fprintf( stdout, "%8d  ", r ) ;
+      Rprintf( "%8d  ", r ) ;
     }
  }
 
@@ -145,11 +145,11 @@ int main( int argc, char *argv[] )
     {
       float r = RandomFloat( mini , maxi  ) ;
 
-      fprintf( stdout, "%8f  ", r ) ;
+      Rprintf( "%8f  ", r ) ;
     }
  }
 
-  fprintf( stdout, "\n" ) ;
+  Rprintf( "\n" ) ;
   return 0 ;
 }
 */

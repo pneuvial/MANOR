@@ -17,6 +17,7 @@
 
 #include <stdlib.h>  /* calloc, free, size_t */
 #include <stdio.h>   /* stderr */
+#include <R.h>
 
 /* ------------------------------------------------------------------- */
 void* GenAlloc
@@ -35,10 +36,10 @@ void* GenAlloc
     }
   else
   {
-    fprintf(stderr, "Fatal: in %s, no memory for %s (%ld elements size %ld)\n",
+    Rprintf("Fatal: in %s, no memory for %s (%ld elements size %ld)\n",
 	    where, what, nelem, elsize);
     if ( doexit )
-      exit( EXIT_FAILURE );
+      error( EXIT_FAILURE );
     else
       return result ;
   }

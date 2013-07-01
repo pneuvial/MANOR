@@ -1,3 +1,6 @@
+2013-07-01
+o Replaced calls to 'exit', 'fprintf' which now raise a WARNING upon check.
+
 2011-03-18
 o Updated calls to 'GLAD:::daglad' in the vignette to fix an error
 caused by changes in the defaults of 'daglad'.

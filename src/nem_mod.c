@@ -442,7 +442,7 @@ void ComputeFki
 	  break ;
 
         default :
-	  fprintf( stderr, "ComputeFki bad arg : family = %d\n",
+	  Rprintf( "ComputeFki bad arg : family = %d\n",
                    SpecP->ClassFamily ) ;
     }
 }
@@ -474,7 +474,7 @@ int GetDensityFunc  /* STS_OK or STS_E_FUNCARG */
 
         default :
 	  *CompuDensFP = NULL ;
-	  fprintf( stderr, "GetDensityFunc bad arg : family = %d\n",
+	  Rprintf( "GetDensityFunc bad arg : family = %d\n",
                    SpecP->ClassFamily ) ;
 	  return STS_E_FUNCARG ;
     }
