@@ -13,6 +13,7 @@
 #endif
 #include <string.h>     /* strncpy, ... */
 #include <math.h>       /* sqrt, ... */
+#include <R.h>
 
 
 /*#define MAXFLOAT  3.40282347e+38F*/
@@ -176,8 +177,7 @@ static int  MakeErrinfo
     for ( ipt = 0, err = STS_OK ; 
 	  ( ipt < N ) && ( err == STS_OK ) ; ipt ++ ) {
       if ( ( tmpV[ ipt ] <= 0 ) || ( tmpV[ ipt ] > ErrinfoP->Kr ) ) {
-	Rprintf( 
-		 "Reference class for point %d not in 1..%d \n", 
+	Rprintf("Reference class for point %d not in 1..%d \n", 
 		 ipt + 1, ErrinfoP->Kr ) ;
 	err = STS_E_FILE ;
       }

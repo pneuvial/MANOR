@@ -17,6 +17,7 @@
 #include <stdio.h>   /* FILE */
 #include <string.h>  /* strcpy */
 #include <stdlib.h>  /* FILE */
+#include <R.h>
 
 #include "lib_io.h"   /* prototypes of exported functions */
 

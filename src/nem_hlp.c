@@ -8,6 +8,7 @@
 
 \*/
 
+#include <R.h>
 #include "nem_hlp.h"  /* Exported prototypes */
 
 void PrintHelpGeneral( FILE* F )

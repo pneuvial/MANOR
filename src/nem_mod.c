@@ -37,6 +37,7 @@
 #include <stdlib.h>     /* malloc, ... */
 #include <string.h>     /* memcpy, ... */
 #include <math.h>       /* exp, ... */
+#include <R.h>
 
 
 #define TWO_PI    2 * 3.14159 

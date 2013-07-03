@@ -6,6 +6,7 @@
 #include    "nem_nei.h"     /* prototypes */
 #include    <stdio.h>       /* fprintf */
 #include    <string.h>      /* memcpy */
+#include <R.h>
 
 
 static int      GetNeighNone                 /* ret : nb of neighbours */

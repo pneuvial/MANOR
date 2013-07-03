@@ -72,6 +72,7 @@ Vers-mod  Date         Who Description
 #include <string.h>     /* memcpy */
 #include <math.h>       /* exp */
 #include <time.h>       /* time */
+#include <R.h>
 #ifdef __TURBOC__
 #include <alloc.h>      /* coreleft, ... */ 
 #endif
@@ -1808,8 +1809,10 @@ static int NemAlgo
     oldcrit = -MAXFLOAT ;
 
     WriteLogHeader( Flog, NemParaP->NbEIters, DataP->NbVars, SpecP ) ;
-    Rprintf( "  Iterations : " ) ;
-    Rprintf( "%4d ", 0 ) ;              /*V1.05-g*/
+    // Commented by PN 2013-07-03
+    // Reason: Rprintf('\b') raises an error in MANOR vignette
+    // Rprintf( "  Iterations : " ) ;
+    // Rprintf( "%4d ", 0 ) ;              /\*V1.05-g*\/ */
 
     /* For each iteration of NEM (until : 
        convergence, or iteration count reached, or empty class) */
@@ -1819,10 +1822,12 @@ static int NemAlgo
           ( err == STS_OK ) ; 
           iter ++ )
     {
-        Rprintf( "\b\b\b\b\b" ) ;       /*V1.05-g*/
-        Rprintf( "%4d ", iter ) ;       /*V1.05-g*/
+        // Commented by PN 2013-07-03
+        // Reason: Rprintf('\b') raises an error in MANOR vignette
+        // Rprintf( "\b\b\b\b\b" ) ;       /\*V1.05-g*\/
+        // Rprintf( "%4d ", iter ) ;       /\*V1.05-g*\/ */
 
-        if ( Flog != NULL ) Rprintf( "%4d ", iter ) ;
+        /* if ( Flog != NULL ) Rprintf( "%4d ", iter ) ; */
 
         /* Save last computed partition as old partition */
         memcpy( WorkP->ColdM, CM, npt * nk * sizeof( float ) ) ;

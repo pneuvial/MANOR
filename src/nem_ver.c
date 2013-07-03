@@ -6,6 +6,7 @@
 \*/
 
 #include "nem_ver.h"  /* Exported prototypes */
+#include <R.h>
 
 const char *NemVersionStrC = "1.08" ; /* Current version of NEM */
 
