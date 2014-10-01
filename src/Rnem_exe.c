@@ -16,8 +16,13 @@
 #include <R.h>
 
 
-/*#define MAXFLOAT  3.40282347e+38F*/
-/*#define MINFLOAT   1.17549435e-38F*/
+#ifndef MAXFLOAT
+#define MAXFLOAT  3.40282347e+38F
+#endif
+
+#ifndef MINFLOAT
+#define MINFLOAT   1.17549435e-38F
+#endif
 
 
 
