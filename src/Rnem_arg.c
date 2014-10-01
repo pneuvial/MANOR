@@ -1,7 +1,6 @@
 #include "nem_typ.h"    /* DataT, ... */
 #include "nem_ver.h"    /* PrintVersions */
 #include "nem_hlp.h"    /* PrintHelpGeneral ... */
-#include "lib_io.h"     /* ReadOpeningComments */ /*V1.06-a*/
 #include "genmemo.h"    /* GenAlloc, ... */ /*V1.06-a*/
 #include <stdio.h>      /* printf, ... */
 #include <stdlib.h>     /* atof, ... */

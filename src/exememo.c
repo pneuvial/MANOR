@@ -36,7 +36,8 @@ void* GenAlloc
     }
   else
   {
-    char* msg = sprintf("Fatal: in %s, no memory for %s (%ld elements size %ld)\n",
+    char* msg;
+    sprintf(msg, "Fatal: in %s, no memory for %s (%ld elements size %ld)\n",
 	    where, what, nelem, elsize);
     if ( doexit )
       error(msg);

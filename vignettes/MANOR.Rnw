@@ -67,7 +67,6 @@ This document is organized as follows: after a short description of optional ite
 
 <<term=FALSE, eval=TRUE>>=
 require(MANOR)
-par(mfrow=c(7,5), mar=par("mar")/2)
 @
 
 % \pdfdoc{Due to space limitations, figures are not included in this vignette. A full html version of this document is available on Institut Curie Bioinformatics Group web page:\\
@@ -272,6 +271,7 @@ This method provides a convenient way to plot a given signal along the genome; t
 \begin{figure}[!htp] \centering
 <<echo=TRUE, fig=TRUE>>=
 data(spatial)
+par(mfrow=c(7,5), mar=par("mar")/2)
 genome.plot(edge.norm, chrLim="LimitChr", cex=1)
 @
 \caption{\emph{Pan-genomic profile of the array. Colors are proportional to log-ratio values.}} \label{fig:genome.plot-quant}
@@ -283,6 +283,7 @@ genome.plot(edge.norm, chrLim="LimitChr", cex=1)
 <<echo=TRUE, fig=TRUE>>=
 data(spatial)
 edge.norm$cloneValues$ZoneGNL <- as.factor(edge.norm$cloneValues$ZoneGNL)
+par(mfrow=c(7,5), mar=par("mar")/2)
 genome.plot(edge.norm, col.var="ZoneGNL", chrLim="LimitChr", cex=1)
 @
 \caption{\emph{Pan-genomic profile of the array. Colors correspond to the values of the variable ``ZoneGNL''.}} \label{fig:genome.plot-qual}

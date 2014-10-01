@@ -3,7 +3,6 @@
 #include "nem_arg.h"    /* NemArg, ... */
 #include "nem_alg.h"    /* ClassifyByNem, ... */
 #include "nem_rnd.h"    /* RandomInteger, ... */
-#include "lib_io.h"     /* ReadOpeningComments, ... */
 #include "genmemo.h"    /* GenAlloc, ... */
 
 #include <stdio.h>      /* printf, ... */
@@ -218,7 +217,7 @@ static int  MakeErrinfo
     return STS_OK ;
   }
   else {
-    ErrinfoP->Kr = (int)NULL ;
+    ErrinfoP->Kr = 0 ;
     ErrinfoP->Refclas_N_Kr = NULL ;
     ErrcurP->Errorrate     = -1.0 ;
     return STS_OK ;

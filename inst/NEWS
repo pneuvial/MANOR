@@ -1,6 +1,10 @@
+2014-10-01 (Version 1.37.2)
+o Removed unused C functions for I/O in 'lib_io'.
+
 2014-10-01 (Version 1.37.1)
 o Minor changes to C code to avoid WARNINGS upon R CMD check.
 o Changed 'par' settings in vignette to avoid 'Figure margins too large' errors.
+
 
 2013-07-03
 o Replaced calls to 'exit', 'fprintf' which now raise a WARNING upon check.
