@@ -83,7 +83,7 @@ Vers-mod  Date         Who Description
 #define NBCYCLES_RECORD    2
 
 
-#define MAXFLOAT  3.40282347e+38F
+/* #define MAXFLOAT  3.40282347e+38F */  // already defined in math.h
 #define MINFLOAT   1.17549435e-38F
 
 #define MAX_BETA           5    /* To check against divergence of beta */

@@ -93,7 +93,7 @@ void PrintHelpGeneral( FILE* F )
     Rprintf( "    interested to know for what kind of problem you have found\n" ) ;
     Rprintf( "    this program to be of use.\n" ) ;
     Rprintf( "\n" ) ;
-    Rprintf( "Van MŸ Dang\n" ) ;
+    Rprintf( "Van Mo Dang\n" ) ;
     Rprintf( "Van.Mo.Dang@utc.fr\n" ) ;
     Rprintf( "http://www.hds.utc.fr/~mdang\n" ) ;
     Rprintf( "\n" ) ;

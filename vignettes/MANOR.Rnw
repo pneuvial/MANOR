@@ -67,6 +67,7 @@ This document is organized as follows: after a short description of optional ite
 
 <<term=FALSE, eval=TRUE>>=
 require(MANOR)
+par(mfrow=c(7,5), mar=par("mar")/2)
 @
 
 % \pdfdoc{Due to space limitations, figures are not included in this vignette. A full html version of this document is available on Institut Curie Bioinformatics Group web page:\\
@@ -208,7 +209,7 @@ args(qscore.summary.arrayCGH)
 @
 
 \section{Data} \label{sec:data}
-\setkeys{Gin}{width=0.6\linewidth}
+\setkeys{Gin}{width=0.99\linewidth}
 
 We provide examples of array-CGH data coming from two different platforms. These data illustrate the need for appropriate within-array normalization methods, and especially the need for methods that handle spatial effects. %These methods are described in detail in \cite{NeuvialHupeBarillot06}.
 
