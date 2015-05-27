@@ -1,10 +1,10 @@
 Package: MANOR
-Version: 1.41.0
-Date: 2014-10-01
+Version: 1.41.1
+Date: 2015-05-27
 Title: CGH Micro-Array NORmalization
-Author: Pierre Neuvial <pierre.neuvial@gmail.com>, Philippe Hupe
+Author: Pierre Neuvial <pierre.neuvial@genopole.cnrs.fr>, Philippe Hupe
         <philippe.hupe@curie.fr>
-Maintainer: Pierre Neuvial <pierre.neuvial@gmail.com>
+Maintainer: Pierre Neuvial <pierre.neuvial@genopole.cnrs.fr>
 Depends: R (>= 2.10), GLAD
 Imports: GLAD, graphics, grDevices, stats, utils
 Description: Importation, normalization, visualization, and quality
