@@ -62,7 +62,12 @@ jobs:
         run: Rscript -e "library(remotes)" -e "update(readRDS('depends.Rds'))" -e "remotes::install_cran('rcmdcheck')"
 
       - name: Check
-        run: Rscript -e "rcmdcheck::rcmdcheck(build_args = '--no-build-vignettes', args = c('--no-manual', '--ignore-vignettes'), check_dir = 'check')"
+        if: runner.os == 'Linux'
+        run: Rscript -e "rcmdcheck::rcmdcheck(args = c('--no-manual', '--as-cran'), check_dir = 'check')"
+
+      - name: Check
+        if: runner.os != 'Linux'
+        run: Rscript -e "rcmdcheck::rcmdcheck(build_args = '--no-build-vignettes', args = c('--no-manual', '--ignore-vignettes', '--as-cran'), check_dir = 'check')"
 
       - name: Upload check results
         if: failure()
