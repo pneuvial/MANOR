@@ -1,5 +1,5 @@
 Package: MANOR
-Version: 1.59.2
+Version: 1.59.2-9000
 Date: 2020-04-06
 Title: CGH Micro-Array NORmalization
 Author: Pierre Neuvial <pierre.neuvial@math.cnrs.fr>, Philippe Hupé
@@ -15,6 +15,6 @@ URL: http://bioinfo.curie.fr/projects/manor/index.html
 biocViews: Microarray, TwoChannel, DataImport, QualityControl,
         Preprocessing, CopyNumberVariation, Normalization
 PackageStatus: Deprecated
-Suggests: knitr
+Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
 Encoding: UTF-8
