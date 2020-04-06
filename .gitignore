@@ -1,0 +1,9 @@
+.Rhistory
+*~
+**/*~
+.R
+.RData
+*.Rproj*
+revdep/data.sqlite
+revdep/checks/*
+revdep/library/*
