@@ -395,7 +395,7 @@ static int  SetImageNeigh
 
 
   /*=================================================================*/
- /*ajout de Philippe Hup‰*/
+ /*ajout de Philippe Hup?*/
  /*interface avec R*/
 
 
@@ -580,7 +580,7 @@ void nem (float *vector, int *Nl, int *Nc, int *Nvars, int *Nclasses, float *bet
 
 	GetInputParaPHUPE (&Data, &NemPara, &Spatial, &StatModel,&Criteria.Errinfo,&Criteria.Errcur, &ClassifM);
 
-	srand( (unsigned) NemPara.Seed ) ;
+	//srand( (unsigned) NemPara.Seed ) ;
 
 	ClassifM =  GenAlloc( Data.NbPts * StatModel.Spec.K, sizeof( float ), 0, "nem", "ClassifMP" ) ;
 	

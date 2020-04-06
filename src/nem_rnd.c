@@ -18,10 +18,11 @@ Vers-mod  Date         Who  Description
 #include <sys/types.h>   /* time_t */
 #include <time.h>        /* time() */
 #include <stdlib.h>      /* srand(), rand() */
+#include <R.h>
 
 #include "nem_rnd.h"
 
-
+/*
 void  RandomSeedByTime( void ) 
 {
     time_t   t ;
@@ -30,7 +31,7 @@ void  RandomSeedByTime( void )
 
     srand( (unsigned) t ) ;
 }
-
+*/
 
 int   RandomInteger( int Mini, int Maxi ) 
 {
@@ -46,8 +47,10 @@ int   RandomInteger( int Mini, int Maxi )
 
     span = Maxi - Mini + 1 ;
 
-    nrandom = rand( ) ;
-
+    GetRNGstate();
+    nrandom = unif_rand( ) ;
+    PutRNGstate();
+    
     /* result = ( (int) ( nrandom % span ) ) + Mini  ; V1.08-a*/
     result = (int) ((double)nrandom / ((double)RAND_MAX + 1) * span) + Mini ;
 
@@ -70,8 +73,10 @@ float   RandomFloat( float Mini, float Maxi )
 
     span = Maxi - Mini ;
 
-    nrandom = rand( ) ;
-
+    GetRNGstate();
+    nrandom = unif_rand( ) ;
+    PutRNGstate();
+    
     result = ( (float) nrandom / RAND_MAX ) * span + Mini  ;
 
     return  result ;
