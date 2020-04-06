@@ -15,6 +15,6 @@ URL: http://bioinfo.curie.fr/projects/manor/index.html
 biocViews: Microarray, TwoChannel, DataImport, QualityControl,
         Preprocessing, CopyNumberVariation, Normalization
 PackageStatus: Deprecated
-Suggests: knitr, rmarkdown
+Suggests: knitr, rmarkdown, bookdown
 VignetteBuilder: knitr
 Encoding: UTF-8
