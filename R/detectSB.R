@@ -1,7 +1,7 @@
 ## Spatial bias detection on arrays
 
 ## Copyright (C) 2003 Institut Curie
-## Author(s): Philippe Hupé (Institut Curie) 2003
+## Author(s): Philippe HupÃ© (Institut Curie) 2003
 ## Contact: manor@curie.fr
 
 
@@ -41,8 +41,8 @@ detectSB.arrayCGH <- function(arrayCGH, variable, proportionup=0.25, proportiond
 
     tab <- data.frame(zone.number, mu, effectif)
 
-### Il se peut qu'il y ait des effectifs à 0
-### par exemple dans le cas d'une classe à 1 élément
+### Il se peut qu'il y ait des effectifs ? 0
+### par exemple dans le cas d'une classe ? 1 ?l?ment
 ### et dont le log-ratio a une valeur manquante
 
     ind <- which(tab$effectif==0)

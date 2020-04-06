@@ -1,7 +1,7 @@
 ## Spatial classification with EM algorithm
 
 ## Copyright (C) 2003 Institut Curie
-## Author(s): Philippe Hupé (Institut Curie) 2003
+## Author(s): Philippe HupÃ© (Institut Curie) 2003
 ## Contact: manor@curie.fr
 
 nem <- function(...)

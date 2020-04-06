@@ -15,8 +15,8 @@ cv <- function(x)
 ## 		ret <- as.numeric(NA)
 ## 	ret
 
-  ### modification de la fonction le 23/09/2008 (P. Hupe)
-  ### permet de retourner NA quand toutes les valeurs de x sont à NA (sinon il y a une erreur)
+### modification de la fonction le 23/09/2008 (P. Hupe)
+### permet de retourner NA quand toutes les valeurs de x sont ? NA (sinon il y a une erreur)
   if (length(attr(na.omit(x),"na.action"))==length(x))
     return(NA)
   else 
@@ -137,14 +137,13 @@ center <-  function(data, var, by.var) {
 
 getChromosomeArm <- function(arrayCGH, chrVar="Chromosome", posVar="Position") {
     cytoband <- NULL ## avoids a warning when loading cytoband data...
-    
-    data("cytoband") ### l'appel de la fonction data crée l'objet cytoband dans .GlobalEnv
-
-    cytoband <- get("cytoband", envir=.GlobalEnv) ### on récupère l'objet cytoband contenu dans .GlobalEnv car sinon il reste positionné à NULL
+    data("cytoband", envir = environment()) ### l'appel de la fonction data cr?e l'objet cytoband dans .GlobalEnv
+    #cytoband <- get("cytoband", envir=.GlobalEnv) ### on r?cup?re l'objet cytoband contenu dans .GlobalEnv car sinon il reste positionn? ? NULL
+    centromere <- cytoband[which(cytoband$Centro==1),]
+    rm(cytoband)
     
     chrArmVar <- "ChromosomeArm"
     chrNumVar <- paste(chrVar, "num", sep=".")
-    centromere <- cytoband[which(cytoband$Centro==1),]
 
     w <- NULL
     for (u in unique(centromere$Chromosome)) {
