@@ -13,7 +13,7 @@ Description: Importation, normalization, visualization, and quality
 License: GPL-2
 URL: http://bioinfo.curie.fr/projects/manor/index.html
 biocViews: Microarray, TwoChannel, DataImport, QualityControl,
-        Preprocessing, CopyNumberVariation
+        Preprocessing, CopyNumberVariation, Normalization
 PackageStatus: Deprecated
 Suggests: knitr
 VignetteBuilder: knitr
