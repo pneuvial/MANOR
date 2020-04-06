@@ -42,7 +42,7 @@ jobs:
         run: Rscript -e "install.packages('remotes')" -e "saveRDS(remotes::dev_package_deps(dependencies = TRUE), 'depends.Rds', version = 2)"
 
       - name: Install Bioconductor dependencies
-        run: Rscript -e "install.packages('BiocManager')" -e "BiocManager::instal('GLAD')"
+        run: Rscript -e "install.packages('BiocManager')" -e "BiocManager::install('GLAD')"
 
       - name: Cache R packages
         if: runner.os != 'Windows'
