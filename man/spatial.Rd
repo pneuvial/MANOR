@@ -58,16 +58,16 @@ data(spatial)
 ## edge: example of array with local spatial effects
 
 layout(matrix(1:4, 2, 2), height=c(9,1))
-arrayPlot(edge, "LogRatio", main="Log-ratios before normalization",
+GLAD::arrayPlot(edge, "LogRatio", main="Log-ratios before normalization",
 zlim=c(-1,1), bar="h", layout=FALSE, mediancenter=TRUE)
-arrayPlot(edge.norm, "LogRatioNorm", main="Log-ratios after spatial
+GLAD::arrayPlot(edge.norm, "LogRatioNorm", main="Log-ratios after spatial
 normalization", zlim=c(-1,1), bar="h", layout=FALSE, mediancenter=TRUE) 
 
 ## gradient: example of array with spatial gradient
 
 layout(matrix(1:4, 2, 2), height=c(9,1))
-arrayPlot(gradient, "LogRatio", main="Log-ratios before normalization",
+GLAD::arrayPlot(gradient, "LogRatio", main="Log-ratios before normalization",
 zlim=c(-2,2), bar="h", layout=FALSE)
-arrayPlot(gradient.norm, "LogRatioNorm", main="Log-ratios after spatial
+GLAD::arrayPlot(gradient.norm, "LogRatioNorm", main="Log-ratios after spatial
 normalization", zlim=c(-2,2), bar="h", layout=FALSE)   
 } 

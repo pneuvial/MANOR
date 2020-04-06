@@ -34,14 +34,14 @@ The function \code{nem} computes spatial classification by EM algorithm.}
 }
 
 \references{
-C. Ambroise, \emph{Approche probabiliste en classification automatique et contraintes de voisinage}, Ph.D. thesis, Université de Technologie de Compiègne, 1996.
+C. Ambroise, \emph{Approche probabiliste en classification automatique et contraintes de voisinage}, Ph.D. thesis, Universit? de Technologie de Compi?gne, 1996.
 
 C. Ambroise, M. Dang, and G. Govaert, \emph{Clustering of
     spatial data by the em algorithm} in Geostatistics for Environmental
   Applications, A. Soares, J. Gomez-Hernandez, and R. Froidevaux, Eds.,
   pp. 493-504. Kluwer Academic Publisher, 1997.
 
-P. Neuvial, P. Hupé, I. Brito, S. Liva, E. Manié, C. Brennetot,
+P. Neuvial, P. Hup?, I. Brito, S. Liva, E. Mani?, C. Brennetot,
   A. Aurias, F. Radvanyi, and E. Barillot. \emph{Spatial normalization
     of array-CGH data}. BMC Bioinformatics, 7(1):264. May 2006.
 }
@@ -51,7 +51,7 @@ P. Neuvial, P. Hupé, I. Brito, S. Liva, E. Manié, C. Brennetot,
 \keyword{models}
 
 
-\author{Philippe Hupé, \email{manor@curie.fr}.}
+\author{Philippe Hup?, \email{manor@curie.fr}.}
 
 \note{People interested in tools for array-CGH analysis can
   visit our web-page: \url{http://bioinfo.curie.fr}.}
@@ -61,7 +61,7 @@ data(spatial)  ## arrays with local spatial effects
 
 ## Plot of LogRatio measured on the array CGH
 \dontrun{
-arrayPlot(edge,"LogRatio", main="Log2-Ratio measured on the array
+GLAD::arrayPlot(edge,"LogRatio", main="Log2-Ratio measured on the array
 CGH", zlim=c(-1,1), bar="v", mediancenter=TRUE) 
 }
 
@@ -71,13 +71,13 @@ edgeTrend <- arrayTrend(edge, variable="ScaledLogRatio",
 span=0.03, degree=1, iterations=3, family="symmetric")
 
 \dontrun{
-arrayPlot(edgeTrend, variable="Trend", main="Spatial trend of the array CGH", bar="v") 
+GLAD::arrayPlot(edgeTrend, variable="Trend", main="Spatial trend of the array CGH", bar="v") 
 }
 
 ## Classification with spatial constraint of the spatial trend
 edgeNem <- nem(edgeTrend, variable="Trend")
 \dontrun{
-arrayPlot(edgeNem, variable="ZoneNem", main="Spatial zones identified by nem", bar="v")
+GLAD::arrayPlot(edgeNem, variable="ZoneNem", main="Spatial zones identified by nem", bar="v")
 }
 }
 

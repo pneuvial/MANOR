@@ -73,8 +73,8 @@ flag.list1$spot$char <- "O"
 flag.list1$spot$label <- "Image analysis"
 
 ## normalize arrayCGH
-\dontrun{edge.norm <- norm(edge, flag.list=flag.list1,
-var="LogRatio", FUN=median, na.rm=TRUE)} 
+edge.norm <- norm(edge, flag.list=flag.list1,
+var="LogRatio", FUN=median, na.rm=TRUE)
 print(edge.norm$flags) ## spot-level flag summary (computed by flag.summary)
 
 ## aggregate arrayCGH without normalization
@@ -103,7 +103,8 @@ flag.list2 <- list(
   chromosome=chromosome.flag)
 
 ## normalize arrayCGH
-\dontrun{gradient.norm <- norm(gradient, flag.list=flag.list2, var="LogRatio", FUN=median, na.rm=TRUE) }
+gradient.norm <- norm(gradient, flag.list=flag.list2, 
+                      var="LogRatio", FUN=median, na.rm=TRUE)
 ## aggregate arrayCGH without normalization
 gradient.nonorm <- norm(gradient, flag.list=NULL, var="LogRatio", FUN=median, na.rm=TRUE) 
 
@@ -125,7 +126,7 @@ ylim=c(-3,2))
 \seealso{\code{\link{flag}}}
 
 \references{
-  P. Neuvial, P. Hupé, I. Brito, S. Liva, E. Manié, C. Brennetot,
+  P. Neuvial, P. Hup?, I. Brito, S. Liva, E. Mani?, C. Brennetot,
     A. Aurias, F. Radvanyi, and E. Barillot. \emph{Spatial normalization
       of array-CGH data}. BMC Bioinformatics, 7(1):264. May 2006.
 }

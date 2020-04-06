@@ -38,7 +38,8 @@
 }
 
 \usage{
-  import(file, var.names=NULL, spot.names=NULL, clone.names=NULL, type=c("default", "gpr", "spot"), id.rep=1, design=NULL, add.lines=FALSE, ...)
+  import(file, var.names=NULL, spot.names=NULL, clone.names=NULL, 
+    type=c("default", "gpr", "spot"), id.rep=1, design=NULL, add.lines=FALSE, ...)
 }
 \arguments{
   \item{file}{a connection or character string giving the name of the
@@ -83,7 +84,8 @@
 dir.in <- system.file("extdata", package="MANOR")
 
 ## import from 'spot' files
-spot.names <- c("LogRatio", "RefFore", "RefBack", "DapiFore", "DapiBack", "SpotFlag", "ScaledLogRatio")
+spot.names <- c("LogRatio", "RefFore", "RefBack", "DapiFore", "DapiBack", 
+                "SpotFlag", "ScaledLogRatio")
 clone.names <- c("PosOrder", "Chromosome")
 edge <- import(paste(dir.in, "/edge.txt", sep=""), type="spot",
 spot.names=spot.names, clone.names=clone.names, add.lines=TRUE) 

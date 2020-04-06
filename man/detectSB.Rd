@@ -44,7 +44,7 @@ proportiondown,type="up", thresholdup=0.2, thresholddown=0.2, \ldots )
     are coded by 0.}  
 }
 
-\author{Philippe Hupé, \email{Philippe.Hupe@.curie.fr}.}
+\author{Philippe Hup?, \email{Philippe.Hupe@.curie.fr}.}
 
 \note{People interested in tools for array-CGH analysis can
   visit our web-page: \url{http://bioinfo.curie.fr}.}
@@ -58,7 +58,7 @@ proportiondown,type="up", thresholdup=0.2, thresholddown=0.2, \ldots )
 data(spatial)  ## arrays with local spatial effects
 
 ## Plot of LogRatio measured on the array CGH
-arrayPlot(edge,"LogRatio", main="Log2-Ratio measured on the array
+GLAD::arrayPlot(edge,"LogRatio", main="Log2-Ratio measured on the array
 CGH", zlim=c(-1,1), bar="v", mediancenter=TRUE) 
 
 ## Spatial trend of the scaled log-ratios (the variable "ScaledLogRatio"
@@ -67,18 +67,18 @@ CGH", zlim=c(-1,1), bar="v", mediancenter=TRUE)
 
 edgeTrend <- arrayTrend(edge, variable="ScaledLogRatio",
 span=0.03, degree=1, iterations=3, family="symmetric")   
-arrayPlot(edgeTrend, variable="Trend", main="Spatial trend of the
+GLAD::arrayPlot(edgeTrend, variable="Trend", main="Spatial trend of the
 array CGH", bar="v")  
 
 \dontrun{
 ## Classification with spatial constraint of the spatial trend
 edgeNem <- nem(edgeTrend, variable="Trend")
-arrayPlot(edgeNem, variable="ZoneNem", main="Spatial zones identified
+GLAD::arrayPlot(edgeNem, variable="ZoneNem", main="Spatial zones identified
 by nem", bar="v") 
 
 # Detection of spatial bias
 edgeDet <- detectSB(edgeNem, variable="LogRatio", proportionup=0.25,type="up", thresholdup=0.15) 
-arrayPlot(edgeDet, variable="SB", main="Zone of spatial bias in red", bar="v")
+GLAD::arrayPlot(edgeDet, variable="SB", main="Zone of spatial bias in red", bar="v")
 
 # CGH profile 
 plot(LogRatio ~ PosOrder, data=edgeDet$arrayValues,
@@ -88,7 +88,7 @@ located in spatial bias are in red")
 }
 
 \references{
-P. Neuvial, P. Hupé, I. Brito, S. Liva, E. Manié, C. Brennetot,
+P. Neuvial, P. Hup?, I. Brito, S. Liva, E. Mani?, C. Brennetot,
 A. Aurias, F. Radvanyi, and E. Barillot. \emph{Spatial normalization of
   array-CGH data}. BMC Bioinformatics, 7(1):264. May 2006.
 }
