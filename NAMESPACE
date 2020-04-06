@@ -1,7 +1,7 @@
-useDynLib("MANOR")
+useDynLib("MANOR", .registration=TRUE)
 
-importFrom("GLAD", "arrayPlot", "arrayPlot.arrayCGH", "ChrNumeric",
-           "myPalette")
+importFrom("GLAD", "arrayPlot", "arrayPlot.arrayCGH", 
+           "ChrNumeric", "myPalette", "as.profileCGH")
 importFrom("graphics", "abline", "plot", "points")
 importFrom("grDevices", "bitmap", "dev.off", "rainbow")
 importFrom("stats", "aggregate", "median", "na.omit", "predict",
@@ -9,3 +9,19 @@ importFrom("stats", "aggregate", "median", "na.omit", "predict",
 importFrom("utils", "data", "read.delim", "write.table")
 
 exportPattern("^[[:alpha:]]+")
+S3method(arrayTrend, arrayCGH)
+S3method(arrayTrend, default)
+S3method(detectSB, arrayCGH)
+S3method(flag.summary, arrayCGH)
+S3method(flag.summary, default)
+S3method(genome.plot, arrayCGH)
+S3method(genome.plot, default)
+S3method(html.report, arrayCGH)
+S3method(html.report, default)
+S3method(nem, arrayCGH)
+S3method(nem, default)
+S3method(norm, arrayCGH)
+S3method(print, flag)
+S3method(report.plot, arrayCGH)
+S3method(report.plot, default)
+S3method(sort, arrayCGH)
