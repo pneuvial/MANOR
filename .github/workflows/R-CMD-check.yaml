@@ -38,7 +38,6 @@ jobs:
 
       - uses: r-lib/actions/setup-tinytex@v1
         if: runner.os == 'Linux' || runner.os == 'macOS'
-        run: tlmgr --version
 
       - name: Cache R packages
         if: runner.os != 'Windows'
