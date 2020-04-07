@@ -37,7 +37,8 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@master
 
       - uses: r-lib/actions/setup-tinytex@v1
-      - run: tlmgr --version
+        if: runner.os == 'Linux' || runner.os == 'macOS'
+        run: tlmgr --version
 
       - name: Cache R packages
         if: runner.os != 'Windows'
@@ -64,12 +65,16 @@ jobs:
       - name: Install dependencies
         run: Rscript -e "library(remotes)" -e "update(readRDS('depends.Rds'))" -e "remotes::install_cran('rcmdcheck')"
 
-      - name: Check
+      - name: Check (Linux)
         if: runner.os == 'Linux'
         run: Rscript -e "rcmdcheck::rcmdcheck(args = c('--no-manual', '--as-cran'), check_dir = 'check')"
 
-      - name: Check
-        if: runner.os != 'Linux'
+      - name: Check (macOS)
+        if: runner.os == 'macOS'
+        run: Rscript -e "rcmdcheck::rcmdcheck(args = c('--no-manual', '--as-cran'), check_dir = 'check')"
+
+      - name: Check (Windows)
+        if: runner.os == 'Windows'
         run: Rscript -e "rcmdcheck::rcmdcheck(build_args = '--no-build-vignettes', args = c('--no-manual', '--ignore-vignettes', '--as-cran'), check_dir = 'check')"
 
       - name: Upload check results
