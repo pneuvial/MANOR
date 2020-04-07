@@ -1,4 +1,6 @@
 ^[.]git
 ^[.]github
+^appveyor.yml$
+^.travis.yml$
 ^revdep
 ^depends.Rds$
