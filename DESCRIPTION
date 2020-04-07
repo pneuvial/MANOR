@@ -1,20 +1,21 @@
 Package: MANOR
-Version: 1.59.2-9000
-Date: 2020-04-06
+Version: 1.59.2
+Date: 2020-04-07
 Title: CGH Micro-Array NORmalization
-Author: Pierre Neuvial <pierre.neuvial@math.cnrs.fr>, Philippe Hupé
-        <philippe.hupe@curie.fr>
-Maintainer: Pierre Neuvial <pierre.neuvial@math.cnrs.fr>
-Depends: R (>= 2.10)
-Imports: GLAD, graphics, grDevices, stats, utils
 Description: Importation, normalization, visualization, and quality
         control functions to correct identified sources of variability
         in array-CGH experiments.
+Author: Pierre Neuvial <pierre.neuvial@math.cnrs.fr>, Philippe Hupé
+        <philippe.hupe@curie.fr>
+Maintainer: Pierre Neuvial <pierre.neuvial@math.cnrs.fr>
 License: GPL-2
+Depends: R (>= 2.10)
+Imports: GLAD, graphics, grDevices, stats, utils
+Suggests: knitr, rmarkdown, bookdown
+VignetteBuilder: knitr
 URL: http://bioinfo.curie.fr/projects/manor/index.html
+BugReports: https://github.com/pneuvial/MANOR/issues
+Encoding: UTF-8
 biocViews: Microarray, TwoChannel, DataImport, QualityControl,
         Preprocessing, CopyNumberVariation, Normalization
 PackageStatus: Deprecated
-Suggests: knitr, rmarkdown, bookdown
-VignetteBuilder: knitr
-Encoding: UTF-8
