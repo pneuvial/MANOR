@@ -36,9 +36,6 @@ jobs:
 
       - uses: r-lib/actions/setup-pandoc@master
 
-      - uses: r-lib/actions/setup-tinytex@v1
-        if: runner.os == 'Linux' || runner.os == 'macOS'
-
       - name: Cache R packages
         if: runner.os != 'Windows'
         uses: actions/cache@v1
@@ -68,12 +65,8 @@ jobs:
         if: runner.os == 'Linux'
         run: Rscript -e "rcmdcheck::rcmdcheck(args = c('--no-manual', '--as-cran'), check_dir = 'check')"
 
-      - name: Check (macOS)
-        if: runner.os == 'macOS'
-        run: Rscript -e "rcmdcheck::rcmdcheck(args = c('--no-manual', '--as-cran'), check_dir = 'check')"
-
-      - name: Check (Windows)
-        if: runner.os == 'Windows'
+      - name: Check (macOS & Windows)
+        if: runner.os == 'macOS' || runner.os == 'Windows'
         run: Rscript -e "rcmdcheck::rcmdcheck(build_args = '--no-build-vignettes', args = c('--no-manual', '--ignore-vignettes', '--as-cran'), check_dir = 'check')"
 
       - name: Upload check results
