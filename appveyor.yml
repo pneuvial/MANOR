@@ -33,7 +33,7 @@ cache:
 build_script:
   - echo Current directory=%CD%
   - travis-tool.sh install_r knitr rmarkdown bookdown
-  - travis-tool.sh install_bioc DNAcopy
+  - travis-tool.sh install_bioc GLAD
 
 test_script:
   - travis-tool.sh run_tests
