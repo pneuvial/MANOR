@@ -1,3 +1,17 @@
+# MANOR 1.59.4
+
+ * Update broken links in vignette.
+
+ * Add BugReports link.
+
+ * Add missing dependencies 'rmarkdown' and 'bookdown' to Suggests.
+ 
+
+# MANOR 1.59.3
+
+ * Package undeprecated by the Bioconductor maintainers.
+
+
 # MANOR 1.59.2
 
  * Turned old .Rnw vignette to .Rmd vignette.
@@ -11,5 +25,3 @@
  * Fixed "register native routines and to disable symbol search".
  
  * Use R's RNG instead of the one from the system in C code.
- 
- * Update broken links in vignette.
