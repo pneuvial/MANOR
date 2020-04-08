@@ -1,5 +1,5 @@
 Package: MANOR
-Version: 1.59.2
+Version: 1.59.3-9000
 Date: 2020-04-07
 Title: CGH Micro-Array NORmalization
 Description: Importation, normalization, visualization, and quality
@@ -18,4 +18,3 @@ BugReports: https://github.com/pneuvial/MANOR/issues
 Encoding: UTF-8
 biocViews: Microarray, TwoChannel, DataImport, QualityControl,
         Preprocessing, CopyNumberVariation, Normalization
-PackageStatus: Deprecated
