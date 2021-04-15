@@ -4,3 +4,5 @@
 ^.travis.yml$
 ^revdep
 ^depends.Rds$
+^.*\.Rproj$
+^\.Rproj\.user$
